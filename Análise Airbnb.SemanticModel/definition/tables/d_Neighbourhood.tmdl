@@ -1,0 +1,106 @@
+table d_Neighbourhood
+	lineageTag: da42bf63-9309-4c6d-800f-cf358d543c5d
+
+	column País
+		dataType: string
+		lineageTag: d700e714-b00c-4770-b04d-7e7c35cbf1d0
+		summarizeBy: none
+		sourceColumn: País
+
+		annotation SummarizationSetBy = Automatic
+
+	column Endereço
+		dataType: string
+		lineageTag: f092e94f-8aea-4ed3-a428-d30863a22fbb
+		summarizeBy: none
+		sourceColumn: Endereço
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data base'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 4fc05d14-b00d-44da-8aee-0f14c0806423
+		summarizeBy: none
+		sourceColumn: Data base
+
+		variation Variation
+			isDefault
+			relationship: 2b40fc90-47ee-4fc6-8a56-87cbc807def9
+			defaultHierarchy: LocalDateTable_8d13dbc2-cad0-4273-b779-99cdb01fd656.'Hierarquia de datas'
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Neighbourhood
+		dataType: string
+		lineageTag: cb5dcf8f-e57d-4aba-b68c-cda7fbc8cf5e
+		summarizeBy: none
+		sourceColumn: Neighbourhood
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: 37e280a6-87bd-45e6-ac7f-6b7c470fc793
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_Neighbourhood-c11f2cfe-bd79-4059-be1b-bd1e29474540 = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\User\Desktop\GleyNovo\MBA FIAP\FASE 2\BASES\neigh\neighbourhoods_DEZ.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Column1", type text}, {"Column2", type text}}),
+				    #"Personalização Adicionada2" = Table.AddColumn(#"Tipo Alterado", "Data base", each "01/12/2022"),
+				    #"Consulta Acrescentada" = Table.Combine({#"Personalização Adicionada2", neighbourhoods_SETEMB}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Consulta Acrescentada",{"Column1"}),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Colunas Removidas", [PromoteAllScalars=true]),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"neighbourhood", type text}}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Tipo Alterado1"),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Duplicatas Removidas", "Estado", each "Rio de Janeiro"),
+				    #"Personalização Adicionada1" = Table.AddColumn(#"Personalização Adicionada", "País", each "Brasil"),
+				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Personalização Adicionada1", "Endereço", each Text.Combine({[neighbourhood], [Estado], [País]}, ","), type text),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Coluna Mesclada Inserida",{{"Estado", type text}}),
+				    #"Colunas Mescladas" = Table.CombineColumns(#"Tipo Alterado2",{"neighbourhood", "Estado"},Combiner.CombineTextByDelimiter(", ", QuoteStyle.None),"Bairro estado"),
+				    #"Tipo Alterado3" = Table.TransformColumnTypes(#"Colunas Mescladas",{{"01/12/2022", type date}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado3",{{"01/12/2022", "Data base"}, {"Column3", "setembro"}}),
+				    #"Coluna Mesclada Inserida1" = Table.AddColumn(#"Colunas Renomeadas", "Data base.1", each Text.Combine({Text.From([Data base], "pt-BR"), Text.From([setembro], "pt-BR")}, ""), type text),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Coluna Mesclada Inserida1", each true),
+				    #"Colunas Removidas1" = Table.RemoveColumns(#"Linhas Filtradas",{"Data base", "setembro"}),
+				    #"Colunas Renomeadas1" = Table.RenameColumns(#"Colunas Removidas1",{{"Data base.1", "Data base"}}),
+				    #"Tipo Alterado4" = Table.TransformColumnTypes(#"Colunas Renomeadas1",{{"Data base", type date}}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Tipo Alterado4",",","- ",Replacer.ReplaceText,{"Endereço"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído","- "," , ",Replacer.ReplaceText,{"Endereço"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","Brasil","Brazil",Replacer.ReplaceText,{"Endereço"}),
+				    #"Coluna Duplicada" = Table.DuplicateColumn(#"Valor Substituído2", "Endereço", "Endereço - Copiar"),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Coluna Duplicada",{"Bairro estado", "Endereço - Copiar", "País", "Endereço", "Data base"}),
+				    #"Colunas Removidas2" = Table.RemoveColumns(#"Colunas Reordenadas",{"Bairro estado"}),
+				    #"Colunas Renomeadas2" = Table.RenameColumns(#"Colunas Removidas2",{{"Endereço - Copiar", "Bairro"}}),
+				    #"Texto Extraído Antes do Delimitador" = Table.TransformColumns(#"Colunas Renomeadas2", {{"Bairro", each Text.BeforeDelimiter(_, ","), type text}}),
+				    #"Colunas Renomeadas3" = Table.RenameColumns(#"Texto Extraído Antes do Delimitador",{{"Bairro", "Neighbourhood"}}),
+				    #"Colunas Reordenadas1" = Table.ReorderColumns(#"Colunas Renomeadas3",{"Neighbourhood", "Endereço", "País", "Data base"}),
+				    #"Personalização Adicionada3" = Table.AddColumn(#"Colunas Reordenadas1", "Estado", each "Rio de Janeiro"),
+				    #"Tipo Alterado5" = Table.TransformColumnTypes(#"Personalização Adicionada3",{{"Estado", type text}, {"País", type text}}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Tipo Alterado5","Brazil","Brasil",Replacer.ReplaceText,{"Endereço"}),
+				    #"Duplicatas Removidas1" = Table.Distinct(#"Valor Substituído3", {"Neighbourhood"}),
+				    #"Colunas Reordenadas2" = Table.ReorderColumns(#"Duplicatas Removidas1",{"Neighbourhood", "Endereço", "Estado", "País", "Data base"}),
+				    #"Personalização Adicionada4" = Table.AddColumn(#"Colunas Reordenadas2", "ZONA", each "0"),
+				    #"Consultas Mescladas" = Table.NestedJoin(#"Personalização Adicionada4", {"Neighbourhood", "ZONA"}, Regiões, {"Neighbourhood", "ZONA"}, "Regiões", JoinKind.LeftOuter),
+				    #"Colunas Removidas3" = Table.RemoveColumns(#"Consultas Mescladas",{"Regiões"}),
+				    #"Consultas Mescladas1" = Table.NestedJoin(#"Colunas Removidas3", {"Neighbourhood", "ZONA"}, Regiões, {"Neighbourhood", "ZONA"}, "Regiões", JoinKind.LeftOuter),
+				    #"Consultas Mescladas2" = Table.NestedJoin(#"Consultas Mescladas1", {"Neighbourhood", "ZONA"}, Regiões, {"Neighbourhood", "ZONA"}, "Regiões.1", JoinKind.FullOuter),
+				    #"Colunas Removidas4" = Table.RemoveColumns(#"Consultas Mescladas2",{"Regiões", "ZONA", "Regiões.1"}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Colunas Removidas4", each ([Neighbourhood] <> null))
+				in
+				    #"Linhas Filtradas1"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

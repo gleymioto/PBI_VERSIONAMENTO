@@ -1,0 +1,23 @@
+relationship 3ca2ba0f-8da8-4361-8966-ab255a03bcb7
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: UnidadesEF.Mês
+	toColumn: 'fat categoria'.Mês
+
+relationship aedc63b9-d8f4-46f3-bfff-eee877cd10b2
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: UnidadesEF.Franquia
+	toColumn: 'fat categoria'.Franquia
+
+relationship 8049ccef-ca07-488c-9085-2fc9a797853f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: LED_juntos.'Data Comanda'
+	toColumn: LocalDateTable_b00c8f60-6224-469a-a7ad-281021d015dc.Date
+
+relationship 266dc0c1-3857-46b2-a460-ab7bd4081577
+	joinOnDateBehavior: datePartOnly
+	fromColumn: UnidadesEF.data
+	toColumn: LocalDateTable_92a5755b-577d-4607-8750-8fbca19017a2.Date
+

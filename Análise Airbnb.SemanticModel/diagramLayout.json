@@ -1,0 +1,118 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 287.20575696275318,
+            "y": 0
+          },
+          "nodeIndex": "d_Calendar",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 648.40518431955957,
+            "y": 10.232677156532617
+          },
+          "nodeIndex": "d_ID",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1351.1482032856534,
+            "y": 7.1397171280809211
+          },
+          "nodeIndex": "MEDIDAS",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 728.662154506482,
+            "y": 488.0731571403461
+          },
+          "nodeIndex": "f_listings",
+          "size": {
+            "height": 756.74407526627647,
+            "width": 508.576837033625
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1059.0255393384255,
+            "y": 5.7090215213146038
+          },
+          "nodeIndex": "d_Neighbourhood",
+          "size": {
+            "height": 207.66224015891487,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 472.58668449174365,
+            "y": 483.19801504111058
+          },
+          "nodeIndex": "f_reviews",
+          "size": {
+            "height": 257.91841785694373,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1714.9,
+            "y": 0
+          },
+          "nodeIndex": "Regiões",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1332.5928637033405,
+            "y": 416.68056622038182
+          },
+          "nodeIndex": "Host_bairros",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 78.957366066837963,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

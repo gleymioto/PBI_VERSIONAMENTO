@@ -1,0 +1,29 @@
+expression F_Treinamentos_Essenciais =
+		let
+		    Fonte = Excel.Workbook(File.Contents("C:\Users\gleyd\OneDrive\Documentos\CASE AUREN\Base Treinamentos Essenciais.xlsx"), null, true),
+		    Essenciais_Sheet = Fonte{[Item="Essenciais",Kind="Sheet"]}[Data],
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Essenciais_Sheet, [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Dia treinamento", type date}, {"Carga horária", type text}, {"Matrícula", Int64.Type}, {"Área", type text}, {"Tema Treinamento", type text}}),
+		    #"Valor Substituído" = Table.ReplaceValue(#"Tipo Alterado",null,"",Replacer.ReplaceValue,{"Área"})
+		in
+		    #"Valor Substituído"
+	lineageTag: d5ed7e24-56f9-4c57-8a68-984256bdb2b2
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression F_Treinamentos_Liderança =
+		let
+		    Fonte = Excel.Workbook(File.Contents("C:\Users\gleyd\OneDrive\Documentos\CASE AUREN\Base Treinamentos Liderança.xlsx"), null, true),
+		    Liderança_Sheet = Fonte{[Item="Liderança",Kind="Sheet"]}[Data],
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Liderança_Sheet, [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Matrícula", Int64.Type}, {"Tema Treinamento", type text}, {"Data Início", type date}, {"Data Fim", type date}, {"Status", type text}, {"VP/Diretoria N-1", type text}})
+		in
+		    #"Tipo Alterado"
+	lineageTag: c896cd76-a737-48c0-8b1b-70141da4cc57
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,414 @@
+table Prediction_Python
+	lineageTag: 6b0f1f5e-241e-40cc-b005-205b55df351d
+
+	column NR_PROPOSTA
+		dataType: string
+		lineageTag: 222e76e9-4a93-4993-b03e-7b1470f3311e
+		summarizeBy: none
+		sourceColumn: NR_PROPOSTA
+
+		annotation SummarizationSetBy = Automatic
+
+	column ITEM_PROPOSTA
+		dataType: int64
+		formatString: 0
+		lineageTag: e09a42a4-aca4-4fd8-9194-6e4ac8b2af40
+		summarizeBy: sum
+		sourceColumn: ITEM_PROPOSTA
+
+		annotation SummarizationSetBy = Automatic
+
+	column DT_UPLOAD
+		dataType: int64
+		formatString: 0
+		lineageTag: a831fdf1-1678-42e4-ba2f-343e3f0f0d21
+		summarizeBy: sum
+		sourceColumn: DT_UPLOAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column DT_PRIM_VENCTO
+		dataType: int64
+		formatString: 0
+		lineageTag: f2e254a4-9e4f-413b-8dbc-b1d561fea018
+		summarizeBy: sum
+		sourceColumn: DT_PRIM_VENCTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOSPEDAGEM
+		dataType: string
+		lineageTag: b3504de5-a27a-473f-9b54-ab4b895d82bd
+		summarizeBy: none
+		sourceColumn: HOSPEDAGEM
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_VENDEDOR
+		dataType: string
+		lineageTag: 3d663a7f-58be-4e02-be1d-95e3159640af
+		summarizeBy: none
+		sourceColumn: CD_VENDEDOR
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_CLI
+		dataType: string
+		lineageTag: ca3a0037-6911-4293-b07b-8c2a0b7b6e3c
+		summarizeBy: none
+		sourceColumn: CD_CLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column CIDADE
+		dataType: string
+		lineageTag: caee10dc-b95f-464e-9af6-89893de4b5f8
+		summarizeBy: none
+		sourceColumn: CIDADE
+
+		annotation SummarizationSetBy = Automatic
+
+	column UF
+		dataType: string
+		lineageTag: 41f1398f-75b2-41f6-bbec-68907ff8c9ed
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column DS_SEGMENTO
+		dataType: string
+		lineageTag: 3cae8736-a2c3-4096-9444-2b4a58ff1848
+		summarizeBy: none
+		sourceColumn: DS_SEGMENTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DS_SUBSEGMENTO
+		dataType: string
+		lineageTag: 3d4b5fd3-f0ad-40ea-8739-a3b72d2965ab
+		summarizeBy: none
+		sourceColumn: DS_SUBSEGMENTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DS_CNAE
+		dataType: string
+		lineageTag: 9696708b-e648-4f87-acd7-aa3b5414ce56
+		summarizeBy: none
+		sourceColumn: DS_CNAE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FAT_ORIGEM
+		dataType: string
+		lineageTag: 4f6d3a76-684c-4a62-ac54-02aded991197
+		summarizeBy: none
+		sourceColumn: FAT_ORIGEM
+
+		annotation SummarizationSetBy = Automatic
+
+	column FAT_FAIXA
+		dataType: string
+		lineageTag: 9ce4d023-e259-4a19-903f-a7d2fd9d094b
+		summarizeBy: none
+		sourceColumn: FAT_FAIXA
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_PROD
+		dataType: string
+		lineageTag: 07fb33d4-7225-4f8a-b1df-7d11287913d8
+		summarizeBy: none
+		sourceColumn: CD_PROD
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_OFERTA
+		dataType: int64
+		formatString: 0
+		lineageTag: 8dddef99-70f6-4bcd-b0ab-30f7cb5d79d9
+		summarizeBy: sum
+		sourceColumn: CD_OFERTA
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_MODAL_COMERC
+		dataType: int64
+		formatString: 0
+		lineageTag: afc1b30c-821e-4ee8-9b68-20cc45dd4f17
+		summarizeBy: sum
+		sourceColumn: CD_MODAL_COMERC
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_GRP_SOLUCAO
+		dataType: int64
+		formatString: 0
+		lineageTag: e4b6fcb3-f758-4f57-8213-190df461f9fc
+		summarizeBy: sum
+		sourceColumn: CD_GRP_SOLUCAO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_MARCA_TOTVS
+		dataType: int64
+		formatString: 0
+		lineageTag: e8268355-a084-46cf-9c25-4b17e358e9a5
+		summarizeBy: sum
+		sourceColumn: CD_MARCA_TOTVS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_TIPO_PRODUTO
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ab018c9-e926-474a-abc8-3ddf413ed534
+		summarizeBy: sum
+		sourceColumn: CD_TIPO_PRODUTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column QTD
+		dataType: int64
+		formatString: 0
+		lineageTag: f799562e-b407-4787-9c29-2da8555ec36d
+		summarizeBy: sum
+		sourceColumn: QTD
+
+		annotation SummarizationSetBy = Automatic
+
+	column MESES_BONIF
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c9a76b6-dd65-4959-b605-425d15bc0c3e
+		summarizeBy: sum
+		sourceColumn: MESES_BONIF
+
+		annotation SummarizationSetBy = Automatic
+
+	column VL_PCT_DESC_TEMP
+		dataType: double
+		lineageTag: 2ce84c8a-ea3d-41ff-be9c-dc01d0196ece
+		summarizeBy: sum
+		sourceColumn: VL_PCT_DESC_TEMP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VL_PCT_DESCONTO
+		dataType: double
+		lineageTag: 3569cadc-481b-4ba6-b813-dbc8c1e2d1a3
+		summarizeBy: sum
+		sourceColumn: VL_PCT_DESCONTO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PRC_UNITARIO_ANONIMO
+		dataType: double
+		lineageTag: 186618fb-6ade-464d-901c-91414e12cbe3
+		summarizeBy: sum
+		sourceColumn: PRC_UNITARIO_ANONIMO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VL_DESCONTO_TEMPORARIO_ANONIMO
+		dataType: double
+		lineageTag: 36de8b57-7886-44b7-85c3-39101e088cfe
+		summarizeBy: sum
+		sourceColumn: VL_DESCONTO_TEMPORARIO_ANONIMO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VL_TOTAL_ANONIMO
+		dataType: double
+		lineageTag: b41afe9b-81f5-4149-a495-6452eeaecccd
+		summarizeBy: sum
+		sourceColumn: VL_TOTAL_ANONIMO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VL_TOTAL_TEMP_ANONIMO
+		dataType: double
+		lineageTag: e6eda467-110d-4f0d-8167-9effcbebfef9
+		summarizeBy: sum
+		sourceColumn: VL_TOTAL_TEMP_ANONIMO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VL_UNIT_TAB_ANONIMO
+		dataType: double
+		lineageTag: b2c89f86-9772-44e0-b96b-cf24a4d7b2ca
+		summarizeBy: sum
+		sourceColumn: VL_UNIT_TAB_ANONIMO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VL_FULL_ANONIMO
+		dataType: decimal
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: e363cfbf-f246-4dda-93bf-755bc6c9534b
+		summarizeBy: sum
+		sourceColumn: VL_FULL_ANONIMO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column VL_DESCONTO_ANONIMO
+		dataType: double
+		lineageTag: aae67816-ffbd-487a-bc90-6449d5da4aa3
+		summarizeBy: sum
+		sourceColumn: VL_DESCONTO_ANONIMO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column HOSPEDAGEM_index
+		dataType: int64
+		formatString: 0
+		lineageTag: 7863fe7d-9504-4e20-96ac-0bea23aae897
+		summarizeBy: sum
+		sourceColumn: HOSPEDAGEM_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_OFERTA_index
+		dataType: int64
+		formatString: 0
+		lineageTag: cf3b81a1-a547-4d9e-8e72-c4129cd6ac36
+		summarizeBy: sum
+		sourceColumn: CD_OFERTA_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column FAT_ORIGEM_index
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a57a61b-4f28-4913-bf23-7d5b43e69bca
+		summarizeBy: sum
+		sourceColumn: FAT_ORIGEM_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column ITEM_PROPOSTA_index
+		dataType: int64
+		formatString: 0
+		lineageTag: d3c4d43a-ebce-419b-bfce-911dcd1cbbdd
+		summarizeBy: sum
+		sourceColumn: ITEM_PROPOSTA_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_MODAL_COMERC_index
+		dataType: int64
+		formatString: 0
+		lineageTag: ddd3fbf1-09a1-4c8d-948b-ca6aac355a75
+		summarizeBy: sum
+		sourceColumn: CD_MODAL_COMERC_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_MARCA_TOTVS_index
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fbbad43-c979-4aaa-8596-ac9825a621ce
+		summarizeBy: sum
+		sourceColumn: CD_MARCA_TOTVS_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_TIPO_PRODUTO_index
+		dataType: int64
+		formatString: 0
+		lineageTag: 6dbb6aad-4ef9-461a-a7ae-4ad14cacf57c
+		summarizeBy: sum
+		sourceColumn: CD_TIPO_PRODUTO_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_GRP_SOLUCAO_index
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b26cbe2-92af-4d6b-b0ae-f739a2e3a756
+		summarizeBy: sum
+		sourceColumn: CD_GRP_SOLUCAO_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column FAT_FAIXA_index
+		dataType: int64
+		formatString: 0
+		lineageTag: 69f0f033-43a8-46ca-b533-089a4ff04b93
+		summarizeBy: sum
+		sourceColumn: FAT_FAIXA_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_PROD_index
+		dataType: int64
+		formatString: 0
+		lineageTag: c9189fdb-1a73-4493-a99d-580fc73fcd52
+		summarizeBy: sum
+		sourceColumn: CD_PROD_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column features
+		dataType: string
+		lineageTag: ab1121fa-9d1e-4c34-af8e-359d3a424c5a
+		summarizeBy: none
+		sourceColumn: features
+
+		annotation SummarizationSetBy = Automatic
+
+	column prediction
+		dataType: decimal
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 4f8912c3-be7f-427b-932b-42152762e0c3
+		summarizeBy: sum
+		sourceColumn: prediction
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column preco_final
+		dataType: double
+		lineageTag: f5686853-3122-4318-a6a2-270a21190cef
+		summarizeBy: sum
+		sourceColumn: preco_final
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Prediction_Python = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\gleyd\Downloads\resultados (7).xlsx"), null, true),
+				    Sheet1_Sheet = Fonte{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"NR_PROPOSTA", type text}, {"ITEM_PROPOSTA", Int64.Type}, {"DT_UPLOAD", Int64.Type}, {"DT_PRIM_VENCTO", Int64.Type}, {"HOSPEDAGEM", type text}, {"CD_VENDEDOR", type text}, {"CD_CLI", type text}, {"CIDADE", type text}, {"UF", type text}, {"DS_SEGMENTO", type text}, {"DS_SUBSEGMENTO", type text}, {"DS_CNAE", type text}, {"FAT_ORIGEM", type text}, {"FAT_FAIXA", type text}, {"CD_PROD", type text}, {"CD_OFERTA", Int64.Type}, {"CD_MODAL_COMERC", Int64.Type}, {"CD_GRP_SOLUCAO", Int64.Type}, {"CD_MARCA_TOTVS", Int64.Type}, {"CD_TIPO_PRODUTO", Int64.Type}, {"QTD", Int64.Type}, {"MESES_BONIF", Int64.Type}, {"VL_PCT_DESC_TEMP", type number}, {"VL_PCT_DESCONTO", type number}, {"PRC_UNITARIO_ANONIMO", type number}, {"VL_DESCONTO_TEMPORARIO_ANONIMO", type number}, {"VL_TOTAL_ANONIMO", type number}, {"VL_TOTAL_TEMP_ANONIMO", type number}, {"VL_UNIT_TAB_ANONIMO", type number}, {"VL_FULL_ANONIMO", Currency.Type}, {"VL_DESCONTO_ANONIMO", type number}, {"HOSPEDAGEM_index", Int64.Type}, {"CD_OFERTA_index", Int64.Type}, {"FAT_ORIGEM_index", Int64.Type}, {"ITEM_PROPOSTA_index", Int64.Type}, {"CD_MODAL_COMERC_index", Int64.Type}, {"CD_MARCA_TOTVS_index", Int64.Type}, {"CD_TIPO_PRODUTO_index", Int64.Type}, {"CD_GRP_SOLUCAO_index", Int64.Type}, {"FAT_FAIXA_index", Int64.Type}, {"CD_PROD_index", Int64.Type}, {"features", type text}, {"prediction", Currency.Type}, {"preco_final", type number}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

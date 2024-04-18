@@ -1,0 +1,176 @@
+table 'vendas seguros'
+	lineageTag: a179a9d9-0aaf-4459-bdce-db6c3873b722
+
+	column cep
+		dataType: int64
+		formatString: 0
+		lineageTag: aa32df7c-7ac4-4447-9077-86186a3f78de
+		summarizeBy: sum
+		sourceColumn: cep
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_civil
+		dataType: string
+		lineageTag: 92d87c5d-cc99-4a10-acf5-57bea18c9afb
+		summarizeBy: none
+		sourceColumn: estado_civil
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_pessoa
+		dataType: string
+		lineageTag: aa05cc69-145c-40a1-a21c-d7f58c0b6b6c
+		summarizeBy: none
+		sourceColumn: tipo_pessoa
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_emissao
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 91926863-e540-4cef-b4e0-7e8b7b61263a
+		summarizeBy: none
+		sourceColumn: data_emissao
+
+		variation Variation
+			isDefault
+			relationship: 453c7dde-56a0-4428-a5f3-c6a7648b6c20
+			defaultHierarchy: LocalDateTable_4a69e063-56f5-432d-91a4-cc04b0c77592.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column sexo
+		dataType: string
+		lineageTag: 936682e8-1099-47fe-b578-ef6f02d540d2
+		summarizeBy: none
+		sourceColumn: sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_fipe
+		dataType: string
+		lineageTag: 4aa7fd57-fe47-4c8d-8962-7f473c509750
+		summarizeBy: none
+		sourceColumn: codigo_fipe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: e805464f-b4ab-41c0-aed2-384a0df4f19a
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cidade
+		dataType: string
+		lineageTag: 9077eafb-54b2-4df5-ae3c-0fc91ea3ec16
+		summarizeBy: none
+		sourceColumn: Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fabricante
+		dataType: string
+		lineageTag: 1e926296-582e-467e-bb64-94d6a39c2ca0
+		summarizeBy: none
+		sourceColumn: Fabricante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Veiculo
+		dataType: string
+		lineageTag: a538fac3-d555-401c-88e6-30a49352552b
+		summarizeBy: none
+		sourceColumn: Veiculo
+
+		annotation SummarizationSetBy = Automatic
+
+	column idade
+		dataType: int64
+		formatString: 0
+		lineageTag: 203574c7-447b-4647-8e9d-cc5db35a3337
+		summarizeBy: sum
+		sourceColumn: idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_seguro
+		dataType: int64
+		formatString: 0
+		lineageTag: d2561db9-c56d-4354-bf3c-caece4fc47a4
+		summarizeBy: sum
+		sourceColumn: qtd_seguro
+
+		annotation SummarizationSetBy = Automatic
+
+	column indice
+		dataType: int64
+		formatString: 0
+		lineageTag: fc335d76-4c0c-49e5-a1d9-49501754a343
+		summarizeBy: sum
+		sourceColumn: indice
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		dataType: int64
+		formatString: 0
+		lineageTag: e8ec5c89-d6a9-4330-9244-e6c976e17b05
+		summarizeBy: sum
+		sourceColumn: Mês
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome do Mês'
+		dataType: string
+		lineageTag: 6922c409-ef03-4352-b59a-234102043c5a
+		summarizeBy: none
+		sourceColumn: Nome do Mês
+		sortByColumn: Mês
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: e8ac004d-a80e-42e8-a664-8483e8464133
+		summarizeBy: sum
+		sourceColumn: Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cluster Idade' = If('vendas seguros'[idade]<=0,"Não Informado",If('vendas seguros'[idade]<=25,"Menos que 25 anos",If('vendas seguros'[idade]<=40,"De 26 a 40 anos",If('vendas seguros'[idade]<55,"De 41 a 54 anos",If('vendas seguros'[idade]>=55, "Acima de 55 Anos")))))
+		dataType: string
+		lineageTag: 9f1ee1c4-6c92-425d-9972-02d001a7a6e0
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vendas seguros-466ee50c-6e01-4630-a726-01daf783bf63' = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\gleyd\OneDrive\Área de Trabalho\GLEY\MBA\base_vendas_seguros.txt"),[Delimiter=";", Columns=13, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"estado_civil", type text}, {"tipo_pessoa", type text}, {"data_emissao", type date}, {"sexo", type text}, {"cep", Int64.Type}, {"codigo_fipe", type text}, {"Estado", type text}, {"Cidade", type text}, {"Fabricante", type text}, {"Veiculo", type text}, {"idade", type text}, {"qtd_seguro", Int64.Type}, {"indice", Int64.Type}}),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Tipo Alterado",{"cep", "estado_civil", "tipo_pessoa", "data_emissao", "sexo", "codigo_fipe", "Estado", "Cidade", "Fabricante", "Veiculo", "idade", "qtd_seguro", "indice"}),
+				    #"Mês Inserido" = Table.AddColumn(#"Colunas Reordenadas", "Mês", each Date.Month([data_emissao]), Int64.Type),
+				    #"Nome do Mês Inserido" = Table.AddColumn(#"Mês Inserido", "Nome do Mês", each Date.MonthName([data_emissao]), type text),
+				    #"Ano Inserido" = Table.AddColumn(#"Nome do Mês Inserido", "Ano", each Date.Year([data_emissao]), Int64.Type),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Ano Inserido","","Não Informado",Replacer.ReplaceValue,{"sexo"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído",".","0",Replacer.ReplaceText,{"idade"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Valor Substituído1",{{"idade", Int64.Type}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado1", each true)
+				in
+				    #"Linhas Filtradas"
+
+	annotation PBI_ResultType = Table
+

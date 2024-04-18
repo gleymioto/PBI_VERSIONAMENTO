@@ -1,0 +1,119 @@
+table Dcalend
+	lineageTag: 878cddd1-6e13-4d37-bb48-e354e3901c55
+
+	column Date
+		dataType: dateTime
+		formatString: mmmm" de "yyyy
+		lineageTag: fa717d2b-ebb6-4c2f-945a-d146c76d11a8
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 6b41eb0f-1bb3-44b9-80f8-f187928f56d2
+			defaultHierarchy: LocalDateTable_cd4b1b77-2d29-4001-a1f0-12d31f2cdb62.'Hierarquia de datas'
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d0292bc-a786-4ba0-a478-e68bb1f9402c
+		summarizeBy: sum
+		sourceColumn: Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		dataType: int64
+		formatString: 0
+		lineageTag: 9289fdcc-6f99-4441-9cde-7d38552705eb
+		summarizeBy: sum
+		sourceColumn: Dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f84d4d2-0a9b-4dd6-8334-dbe066cd98ea
+		summarizeBy: sum
+		sourceColumn: Trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome do Dia'
+		dataType: string
+		lineageTag: f03d3c5e-61bd-49fa-9f60-5fcaddbd7f89
+		summarizeBy: none
+		sourceColumn: Nome do Dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dia da Semana'
+		dataType: int64
+		formatString: 0
+		lineageTag: fdd354fa-082f-41fd-9705-698c4a12c674
+		summarizeBy: sum
+		sourceColumn: Dia da Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome do Mês'
+		dataType: string
+		lineageTag: 4e149661-8674-4dfb-bda0-5df86f8d2cd7
+		summarizeBy: none
+		sourceColumn: Nome do Mês
+		sortByColumn: Mês
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		dataType: int64
+		formatString: 0
+		lineageTag: aa0d8c67-0868-4cb8-b291-5c800c900b12
+		summarizeBy: sum
+		sourceColumn: Mês
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes/ano
+		dataType: string
+		lineageTag: 93af3877-cd6c-430f-81e9-d231bd834a9a
+		summarizeBy: none
+		sourceColumn: mes/ano
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dcalend-559b5c5c-c681-452d-8345-8c1cd5f3b5d9 = m
+		mode: import
+		source =
+				let
+				    Fonte = Consulta1(#date(2012, 1, 1), 1095, #duration(1, 0, 0, 0)),
+				    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Convertido para Tabela",{{"Column1", "Date"}}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Renomeadas",{{"Date", type date}}),
+				    #"Ano Inserido" = Table.AddColumn(#"Tipo Alterado", "Ano", each Date.Year([Date]), Int64.Type),
+				    #"Dia Inserido" = Table.AddColumn(#"Ano Inserido", "Dia", each Date.Day([Date]), Int64.Type),
+				    #"Trimestre Inserido" = Table.AddColumn(#"Dia Inserido", "Trimestre", each Date.QuarterOfYear([Date]), Int64.Type),
+				    #"Nome do Dia Inserido" = Table.AddColumn(#"Trimestre Inserido", "Nome do Dia", each Date.DayOfWeekName([Date]), type text),
+				    #"Dia da Semana Inserido" = Table.AddColumn(#"Nome do Dia Inserido", "Dia da Semana", each Date.DayOfWeek([Date]), Int64.Type),
+				    #"Nome do Mês Inserido" = Table.AddColumn(#"Dia da Semana Inserido", "Nome do Mês", each Date.MonthName([Date]), type text),
+				    #"Mês Inserido" = Table.AddColumn(#"Nome do Mês Inserido", "Mês", each Date.Month([Date]), Int64.Type),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Mês Inserido",{"Date", "Dia", "Trimestre", "Nome do Dia", "Dia da Semana", "Mês", "Nome do Mês", "Ano"}),
+				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Colunas Reordenadas", "mes/ano", each Text.Combine({[Nome do Mês], Text.From([Ano], "pt-BR")}, " "), type text)
+				in
+				    #"Coluna Mesclada Inserida"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

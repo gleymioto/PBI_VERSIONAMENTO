@@ -1,0 +1,37 @@
+table Regiões
+	lineageTag: dc1557c3-46f5-4125-bee9-ed2c649651a5
+
+	column Neighbourhood
+		dataType: string
+		lineageTag: 5705e3b4-b631-4eec-83bd-444cebd5b941
+		summarizeBy: none
+		sourceColumn: Neighbourhood
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZONA
+		dataType: string
+		lineageTag: 9c80d03c-e733-493e-b0b5-c50944848dc2
+		summarizeBy: none
+		sourceColumn: ZONA
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Regiões-3532a166-aad7-4e51-a453-4d09f63258eb = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\User\Desktop\GleyNovo\MBA FIAP\FASE 2\APOIO Solution Sprint Case.xlsx"), null, true),
+				    Planilha2_Sheet = Fonte{[Item="Planilha2",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Planilha2_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"BAIRRO", type text}, {"ZONA", type text}, {"Column3", type any}, {"Column4", type any}, {"Column5", type any}, {"Column6", type any}, {"Column7", type any}, {"Column8", type any}, {"Column9", type any}, {"Column10", type any}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Column3", "Column4", "Column5", "Column6", "Column7", "Column8", "Column9", "Column10"}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Colunas Removidas",{{"BAIRRO", "Neighbourhood"}}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Colunas Renomeadas", {"Neighbourhood"})
+				in
+				    #"Duplicatas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

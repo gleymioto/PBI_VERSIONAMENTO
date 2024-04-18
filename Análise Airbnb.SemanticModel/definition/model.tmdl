@@ -1,0 +1,43 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Erros nas consultas que foram carregadas em 13/03/2023 12:00:49.
+queryGroup 'Erros na Consulta - 13/03/2023 12:00:49'
+
+	annotation PBI_QueryGroupOrder = 0
+
+/// Erros nas consultas que foram carregadas em 24/03/2023 11:38:34.
+queryGroup 'Erros na Consulta - 24/03/2023 11:38:34'
+
+	annotation PBI_QueryGroupOrder = 1
+
+annotation PBI_QueryOrder = ["d_Neighbourhood","neighbourhoods_SETEMB","f_reviews","f_reviews_SETEMB","Consulta1","d_Calendar","f_listings","listings_SETEMB","d_ID","MEDIDAS","Regiões","Host_bairros","Erros em f_listings"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.128.952.0 (24.04)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_221de2bc-643c-4be7-917c-d03e309aef5f
+ref table d_Neighbourhood
+ref table f_reviews
+ref table d_Calendar
+ref table LocalDateTable_de5b07fb-c613-4cb8-b385-21218ff231f7
+ref table f_listings
+ref table LocalDateTable_74602cbf-2e9d-40e0-b79b-c4ed9910a00a
+ref table LocalDateTable_0303fbeb-81dd-48cf-9e3e-48f01847a6e7
+ref table LocalDateTable_aab5ba2a-1665-4392-89fa-d8f5e5d36ce3
+ref table LocalDateTable_a95f6d79-2c74-4106-b550-cd694927293f
+ref table LocalDateTable_c0ed1781-b28e-4eb5-a582-71ab8da6a403
+ref table d_ID
+ref table MEDIDAS
+ref table LocalDateTable_8d13dbc2-cad0-4273-b779-99cdb01fd656
+ref table Regiões
+ref table Host_bairros
+

@@ -1,0 +1,42 @@
+table Python_sinistPolicial_Correlação
+	lineageTag: 137be498-b276-4531-9d25-fa9fd949dd7a
+
+	column Column1
+		dataType: string
+		lineageTag: 8449b71d-5989-4f21-ac23-47af9f924904
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Atributo
+		dataType: string
+		lineageTag: 11470a07-1b3a-4575-bda8-1354ec74accf
+		summarizeBy: none
+		sourceColumn: Atributo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valor
+		dataType: double
+		formatString: 0.00
+		lineageTag: b1d07c05-dc0f-418e-a151-6490462c927c
+		summarizeBy: sum
+		sourceColumn: Valor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Python_sinistPolicial_Correlação-e1eedc19-4be6-479c-88c0-ed567b96309d = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\gleyd\OneDrive\Documentos\atividade_gley\sinistro_policial_corr.csv"),[Delimiter=";", Columns=23, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Outras Colunas Não Dinâmicas" = Table.UnpivotOtherColumns(#"Cabeçalhos Promovidos", {""}, "Atributo", "Valor"),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Outras Colunas Não Dinâmicas",".",",",Replacer.ReplaceText,{"Valor"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"Valor", type number}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

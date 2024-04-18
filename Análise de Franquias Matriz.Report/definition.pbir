@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Análise de Franquias Matriz.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

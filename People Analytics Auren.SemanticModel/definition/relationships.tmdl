@@ -1,0 +1,18 @@
+relationship fa79266a-7ebd-4a12-8fc4-62e08418cbc3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: D_Calendario.Data
+	toColumn: LocalDateTable_839ec521-8689-4c5d-8e76-b05e62896f68.Date
+
+relationship bd74a195-f424-45cc-b539-139fa5a17f06
+	joinOnDateBehavior: datePartOnly
+	fromColumn: F_Treinamentos.'Data Fim'
+	toColumn: LocalDateTable_18b15f62-964d-4a6c-8478-b7be5c164475.Date
+
+relationship b145ca41-658c-4eeb-b1b4-ab162b706117
+	fromColumn: F_Treinamentos.'Data Início/Treinamento'
+	toColumn: D_Calendario.Data
+
+relationship 2ae0a217-0975-48d4-93eb-990dc823fa2e
+	fromColumn: F_Treinamentos.ID_Matrículas
+	toColumn: D_Funcionários.ID_Matrículas
+

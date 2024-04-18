@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Análise Airbnb"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5ddc1288-19c2-4fac-abdc-371c49482c8b"
+  }
+}

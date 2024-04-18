@@ -1,0 +1,23 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBIDesktopVersion = 2.128.952.0 (24.04)
+
+annotation PBI_QueryOrder = ["UnidadesEF","fat categoria","LED_juntos"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table UnidadesEF
+ref table DateTableTemplate_8d906aed-36c4-44cd-8ddd-bae6ced78efb
+ref table 'fat categoria'
+ref table LED_juntos
+ref table LocalDateTable_b00c8f60-6224-469a-a7ad-281021d015dc
+ref table LocalDateTable_92a5755b-577d-4607-8750-8fbca19017a2
+

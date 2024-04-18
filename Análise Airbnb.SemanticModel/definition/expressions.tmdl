@@ -1,0 +1,77 @@
+expression neighbourhoods_SETEMB =
+		let
+		    Fonte = Csv.Document(File.Contents("C:\Users\User\Desktop\GleyNovo\MBA FIAP\FASE 2\BASES\neigh\neighbourhoods_SETEMB.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Column1", type text}, {"Column2", type text}}),
+		    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "Data Base", each "01/09/2022"),
+		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Data Base", type date}})
+		in
+		    #"Tipo Alterado1"
+	lineageTag: 6f802469-79ae-4fe5-8ddf-fc12209d37fe
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression Consulta1 =
+		let
+		    Fonte = List.Dates
+		in
+		    Fonte
+	lineageTag: 54b0b269-202d-4812-b56b-39ade5fad91b
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Function
+
+expression listings_SETEMB =
+		let
+		    Fonte = Csv.Document(File.Contents("C:\Users\User\Desktop\GleyNovo\MBA FIAP\FASE 2\BASES\listings\listings_SETEMB.csv"),[Delimiter=",", Columns=75, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"id", Int64.Type}, {"listing_url", type text}, {"scrape_id", type text}, {"last_scraped", type date}, {"source", type text}, {"name", type text}, {"description", type text}, {"neighborhood_overview", type text}, {"picture_url", type text}, {"host_id", Int64.Type}, {"host_url", type text}, {"host_name", type text}, {"host_since", type date}, {"host_location", type text}, {"host_about", type text}, {"host_response_time", type text}, {"host_response_rate", type text}, {"host_acceptance_rate", type text}, {"host_is_superhost", type text}, {"host_thumbnail_url", type text}, {"host_picture_url", type text}, {"host_neighbourhood", type text}, {"host_listings_count", Int64.Type}, {"host_total_listings_count", Int64.Type}, {"host_verifications", type text}, {"host_has_profile_pic", type text}, {"host_identity_verified", type text}, {"neighbourhood", type text}, {"neighbourhood_cleansed", type text}, {"neighbourhood_group_cleansed", type text}, {"latitude", Int64.Type}, {"longitude", Int64.Type}, {"property_type", type text}, {"room_type", type text}, {"accommodates", Int64.Type}, {"bathrooms", type text}, {"bathrooms_text", type text}, {"bedrooms", Int64.Type}, {"beds", Int64.Type}, {"amenities", type text}, {"price", type text}, {"minimum_nights", Int64.Type}, {"maximum_nights", Int64.Type}, {"minimum_minimum_nights", Int64.Type}, {"maximum_minimum_nights", Int64.Type}, {"minimum_maximum_nights", Int64.Type}, {"maximum_maximum_nights", Int64.Type}, {"minimum_nights_avg_ntm", Int64.Type}, {"maximum_nights_avg_ntm", Int64.Type}, {"calendar_updated", type text}, {"has_availability", type text}, {"availability_30", Int64.Type}, {"availability_60", Int64.Type}, {"availability_90", Int64.Type}, {"availability_365", Int64.Type}, {"calendar_last_scraped", type date}, {"number_of_reviews", Int64.Type}, {"number_of_reviews_ltm", Int64.Type}, {"number_of_reviews_l30d", Int64.Type}, {"first_review", type date}, {"last_review", type date}, {"review_scores_rating", Int64.Type}, {"review_scores_accuracy", Int64.Type}, {"review_scores_cleanliness", Int64.Type}, {"review_scores_checkin", Int64.Type}, {"review_scores_communication", Int64.Type}, {"review_scores_location", Int64.Type}, {"review_scores_value", Int64.Type}, {"license", type text}, {"instant_bookable", type text}, {"calculated_host_listings_count", Int64.Type}, {"calculated_host_listings_count_entire_homes", Int64.Type}, {"calculated_host_listings_count_private_rooms", Int64.Type}, {"calculated_host_listings_count_shared_rooms", Int64.Type}, {"reviews_per_month", Int64.Type}}),
+		    #"Linhas Classificadas" = Table.Sort(#"Tipo Alterado",{{"id", Order.Ascending}}),
+		    #"Personalização Adicionada" = Table.AddColumn(#"Linhas Classificadas", "Data", each "01/09/2022"),
+		    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Personalização Adicionada", "Host por acomodação", each if [host_listings_count] <= 1 then "Único Host" else "Vários Hosts")
+		in
+		    #"Coluna Condicional Adicionada"
+	lineageTag: 4beb379b-16ef-46f4-ba27-0ce65884126b
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression f_reviews_SETEMB =
+		let
+		    Fonte = Csv.Document(File.Contents("C:\Users\User\Desktop\GleyNovo\MBA FIAP\FASE 2\BASES\reviews\reviews_SETEMB.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"listing_id", Int64.Type}, {"id", Int64.Type}, {"date", type date}, {"reviewer_id", Int64.Type}, {"reviewer_name", type text}, {"comments", type text}}),
+		    #"Colunas Reordenadas" = Table.ReorderColumns(#"Tipo Alterado",{"id", "listing_id", "date", "reviewer_id", "reviewer_name", "comments"}),
+		    #"Personalização Adicionada" = Table.AddColumn(#"Colunas Reordenadas", "Data base", each "01/09/2022")
+		in
+		    #"Personalização Adicionada"
+	lineageTag: 3da2a840-f9ab-45ab-b6cc-85bab028e687
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'Erros em f_listings' =
+		let
+		Fonte = f_listings,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"listing_id", "listing_url", "scrape_id", "last_scraped", "source", "name", "description", "neighborhood_overview", "picture_url", "host_id", "host_url", "host_name", "host_since", "host_location", "host_about", "host_response_time", "host_response_rate", "host_acceptance_rate", "host_is_superhost", "host_thumbnail_url", "host_picture_url", "host_neighbourhood", "host_listings_count", "host_total_listings_count", "host_verifications", "host_has_profile_pic", "host_identity_verified", "neighbourhood_cleansed", "neighbourhood_group_cleansed", "Latitude", "Longitude", "property_type", "room_type", "accommodates", "bathrooms", "bathrooms_text", "bedrooms", "beds", "amenities", "price", "minimum_nights", "maximum_nights", "minimum_minimum_nights", "maximum_minimum_nights", "minimum_maximum_nights", "maximum_maximum_nights", "minimum_nights_avg_ntm", "maximum_nights_avg_ntm", "calendar_updated", "has_availability", "availability_30", "availability_60", "availability_90", "availability_365", "calendar_last_scraped", "number_of_reviews", "number_of_reviews_ltm", "number_of_reviews_l30d", "first_review", "last_review", "review_scores_rating", "review_scores_accuracy", "review_scores_cleanliness", "review_scores_checkin", "review_scores_communication", "review_scores_location", "review_scores_value", "license", "instant_bookable", "calculated_host_listings_count", "Data", "calculated_host_listings_count_entire_homes", "calculated_host_listings_count_private_rooms", "calculated_host_listings_count_shared_rooms", "reviews_per_month", "Host por acomodação", "Estado", "País", "Preço (dólar)", "Cluster Turista/Residente"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "listing_id", "listing_url", "scrape_id", "last_scraped", "source", "name", "description", "neighborhood_overview", "picture_url", "host_id", "host_url", "host_name", "host_since", "host_location", "host_about", "host_response_time", "host_response_rate", "host_acceptance_rate", "host_is_superhost", "host_thumbnail_url", "host_picture_url", "host_neighbourhood", "host_listings_count", "host_total_listings_count", "host_verifications", "host_has_profile_pic", "host_identity_verified", "neighbourhood_cleansed", "neighbourhood_group_cleansed", "Latitude", "Longitude", "property_type", "room_type", "accommodates", "bathrooms", "bathrooms_text", "bedrooms", "beds", "amenities", "price", "minimum_nights", "maximum_nights", "minimum_minimum_nights", "maximum_minimum_nights", "minimum_maximum_nights", "maximum_maximum_nights", "minimum_nights_avg_ntm", "maximum_nights_avg_ntm", "calendar_updated", "has_availability", "availability_30", "availability_60", "availability_90", "availability_365", "calendar_last_scraped", "number_of_reviews", "number_of_reviews_ltm", "number_of_reviews_l30d", "first_review", "last_review", "review_scores_rating", "review_scores_accuracy", "review_scores_cleanliness", "review_scores_checkin", "review_scores_communication", "review_scores_location", "review_scores_value", "license", "instant_bookable", "calculated_host_listings_count", "Data", "calculated_host_listings_count_entire_homes", "calculated_host_listings_count_private_rooms", "calculated_host_listings_count_shared_rooms", "reviews_per_month", "Host por acomodação", "Estado", "País", "Preço (dólar)", "Cluster Turista/Residente"})
+		in
+		  #"Colunas Reordenadas"
+	lineageTag: bedb2e58-b007-41eb-9d48-35d021279db0
+	queryGroup: 'Erros na Consulta - 24/03/2023 11:38:34'
+
+	annotation PBI_NavigationStepName = Navegação
+

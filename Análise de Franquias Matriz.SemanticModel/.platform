@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Análise de Franquias Matriz"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c4618a0e-7981-4d33-989c-15c643aae9de"
+  }
+}

@@ -1,0 +1,259 @@
+table Medidas
+	lineageTag: 3e32c49b-0a3e-462a-b33d-ac1c8d4f9f9a
+
+	measure '% aprec senior' = DIVIDE([senior],[total base])
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: SENIOR
+		lineageTag: 4d6e855b-b823-450a-89cb-c2e1974e0840
+
+		changedProperty = FormatString
+
+	measure senior = COUNTROWS('apreciador senior')
+		formatString: 0
+		displayFolder: SENIOR
+		lineageTag: c3660f29-2ee7-40bd-9fbf-52eba32a6c84
+
+	measure 'total base' = COUNTROWS('base completa')
+		formatString: 0
+		displayFolder: TOTAL BASE
+		lineageTag: 5dc3b6bb-fb2f-489b-a558-c30e42ac713b
+
+	measure Fat_senior = SUM('apreciador senior'[MntWines])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: SENIOR
+		lineageTag: eddffa4d-2b7f-4d1e-be6d-9dd72eed036c
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '$ vinho anual_senior' = (86076 + 113242 + 34333)/3
+		displayFolder: SENIOR
+		lineageTag: 57745290-12af-44e7-9336-2d04b1e1148f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '$ vinho mensal_senior' = [$ vinho anual_senior]/12
+		displayFolder: SENIOR
+		lineageTag: 49f926be-dd55-47c5-a68e-3b143ae9dd65
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Fat_mediano = SUM(mediano[MntWines])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: MEDIANO
+		lineageTag: cf326ec6-509c-47e7-a706-ae3c3674c318
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'mediano total' = COUNTROWS('mediano')
+		formatString: 0
+		displayFolder: MEDIANO
+		lineageTag: d5bc8923-4aa0-4180-8f77-c4cf0a1a477c
+
+	measure '% MEDIANO' = [mediano total]/[total base]
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: MEDIANO
+		lineageTag: c49be54f-fa77-4efc-a5b5-d3e4e33ca954
+
+		changedProperty = FormatString
+
+	measure '$ vinho mediano' = (60631 + 154334 + 65593)/3
+		displayFolder: MEDIANO
+		lineageTag: 00f0c5e7-cd2c-471a-84bd-cbbc6d42ee2b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '$ vinho mensal_mediano' = [$ vinho mediano]/12
+		displayFolder: MEDIANO
+		lineageTag: a05bbe6c-8934-415f-a7be-9537ff9d5178
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'novos mercados total' = COUNTROWS('novos mercados')
+		formatString: 0
+		displayFolder: NOVOS MERCADOS
+		lineageTag: 619ffe70-b96d-404e-9f72-bf69341ea7d5
+
+	measure '% novos mercados' = [novos mercados total]/[total base]
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: NOVOS MERCADOS
+		lineageTag: 278f8108-4c15-4571-a8bb-99e6f6e95f77
+
+		changedProperty = FormatString
+
+	measure 'R$ vinho NV mercados' = AVERAGE('novos mercados'[MntWines])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: NOVOS MERCADOS
+		lineageTag: e72eae4f-1da1-4184-9cb1-1d2e132dbdc4
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '$ vinho novosmercados' = (12707 + 28093 + 6649)/3
+		displayFolder: NOVOS MERCADOS
+		lineageTag: 845e63da-7455-4ad7-a7ad-492bf441cb61
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '$ vinho mensal_nv mercados' = [$ vinho novosmercados]/12
+		displayFolder: NOVOS MERCADOS
+		lineageTag: 7d9228c1-98f2-4653-b255-46045f2c293a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Média senior_R$ vinho' = AVERAGE('apreciador senior'[MntWines])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: SENIOR
+		lineageTag: 3f60cf3e-c865-4f80-90e0-d6136acf6322
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'R$ vinho MEDIANO_MÉDIA' = AVERAGEX(mediano,mediano[MntWines])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: MEDIANO
+		lineageTag: 91adfc72-23a3-49e1-af01-47ca4d9813fe
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Fat_novosMercados = SUM('novos mercados'[MntWines])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: NOVOS MERCADOS
+		lineageTag: d5fda2ab-202c-4756-ab69-257fd1fda17d
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Fat médio mensal Senior' =
+			
+			AVERAGEX(
+			    VALUES('apreciador senior'[mes/ano]),
+			    [Fat_senior]
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: SENIOR
+		lineageTag: 1c41f0ee-c556-48af-a986-7d549c2affab
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Fat médio anual_senior' =
+			
+			AVERAGEX(
+			    VALUES('apreciador senior'[Ano]),
+			    [Fat_senior]
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: SENIOR
+		lineageTag: 08139b10-057c-4e16-9515-65c554dc42c4
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Fat médio anual_mediano' =
+			
+			AVERAGEX(
+			    VALUES('mediano'[Ano]),
+			    [Fat_mediano]
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: MEDIANO
+		lineageTag: 37f1c24c-2969-45f8-9927-c344b87319b1
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Fat médio mensal Mediano' =
+			
+			AVERAGEX(
+			    VALUES(mediano[mês/ano]),
+			    [Fat_mediano]
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: MEDIANO
+		lineageTag: 81d85bbb-9c56-49e8-bf44-52ec4fae0901
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Fat médio mensal novos mercados' =
+			
+			AVERAGEX(
+			    VALUES('novos mercados'[mes/ano]),
+			    [Fat_novosMercados]
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: NOVOS MERCADOS
+		lineageTag: a3899593-1516-4656-859c-808fbba74ffe
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Fat médio anual_novosMercados' =
+			
+			AVERAGEX(
+			    VALUES('novos mercados'[Ano]),
+			    [Fat_novosMercados]
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: NOVOS MERCADOS
+		lineageTag: bf7afde7-1571-4bcb-9242-0cc63da3886a
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'novos mercados' = COUNTROWS('novos mercados')
+		formatString: 0
+		displayFolder: NOVOS MERCADOS
+		lineageTag: df67ff18-e7ec-4360-8599-f7f3857095b9
+
+	measure ConsumoAnual_Mediano = [Fat_novosMercados]/24
+		formatString: "R$"\ #,0.000;-"R$"\ #,0.000;"R$"\ #,0.000
+		lineageTag: 54d8971a-4e7d-49b7-8c0d-14f4860404eb
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure ConsumoAnual_2anos = [Fat_senior]/24
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: fff0442c-3401-4aff-a1e9-8b5b81c8a1b2
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'ConsumoAnual_Novos Mercados' = [Fat_novosMercados]/24
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: b69bdd4e-2adc-453c-a75e-d5871a7f65b9
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	partition Medidas-dd65b7b2-9338-4579-a3a9-1043f81d2d40 = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

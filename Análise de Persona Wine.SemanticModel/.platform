@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Análise de Persona Wine"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b618b6ec-f865-4cbd-acb0-f7eab2fc70a8"
+  }
+}

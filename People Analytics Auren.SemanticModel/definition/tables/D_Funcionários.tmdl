@@ -1,0 +1,131 @@
+table D_Funcionários
+	lineageTag: 8dc4c092-1457-465a-874b-63e85a896747
+
+	column ID_Matrículas
+		dataType: string
+		lineageTag: b6f92e58-4fc1-4f74-91ef-6a2d070129f8
+		summarizeBy: none
+		sourceColumn: ID_Matrículas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código Unidade Organizacional'
+		dataType: int64
+		formatString: 0
+		lineageTag: ce334fd4-3fa7-40d4-927b-f9ec4a256d01
+		summarizeBy: none
+		sourceColumn: Código Unidade Organizacional
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descrição Unidade Organizacional'
+		dataType: string
+		lineageTag: 0b92316d-a9a5-430f-a440-7248ecba6ecb
+		summarizeBy: none
+		sourceColumn: Descrição Unidade Organizacional
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Filtro Perfil'
+		dataType: string
+		lineageTag: d67e9bec-c370-4d05-997d-bda4326f3c16
+		summarizeBy: none
+		sourceColumn: Filtro Perfil
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gênero
+		dataType: string
+		lineageTag: 4fb21525-66dc-4d03-9765-47d39ac233d4
+		summarizeBy: none
+		sourceColumn: Gênero
+
+		annotation SummarizationSetBy = Automatic
+
+	column Instrução
+		dataType: string
+		lineageTag: cce10d79-5921-4ac6-a1b4-a0d69d675fff
+		summarizeBy: none
+		sourceColumn: Instrução
+
+		annotation SummarizationSetBy = Automatic
+
+	column Área
+		dataType: string
+		lineageTag: fa227fa4-5c71-4214-8578-828e4d3f7775
+		summarizeBy: none
+		sourceColumn: Área
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cluster Tempo Casa' =
+			
+			If('D_Funcionários'[Tempo de casa_Ano]<1,"Menos de 1 ano",If('D_Funcionários'[Tempo de casa_Ano]=1,"1 ano",If('D_Funcionários'[Tempo de casa_Ano]>1 && 'D_Funcionários'[Tempo de casa_Ano]<3 ,"2-3 Anos", If('D_Funcionários'[Tempo de casa_Ano]>=3 && 'D_Funcionários'[Tempo de casa_Ano]<5,"3-5 Anos","Mais que 5 anos"))))
+		dataType: string
+		lineageTag: 5fea336a-1e75-475b-a2ed-7dffed4b88fb
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tempo de casa_Ano'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d5d8a7a-a27c-4548-9564-39934a771629
+		summarizeBy: none
+		sourceColumn: Tempo de casa_Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descrição Anos'
+		dataType: string
+		lineageTag: 2a0636d0-4851-4bb4-9395-bf74f5aa6005
+		summarizeBy: none
+		sourceColumn: Descrição Anos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Índice
+		dataType: int64
+		formatString: 0
+		lineageTag: 855cb3bc-9188-4e0f-b1b6-ad148a015a29
+		summarizeBy: none
+		sourceColumn: Índice
+
+		annotation SummarizationSetBy = Automatic
+
+	partition D_Funcionários = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\gleyd\OneDrive\Documentos\CASE AUREN\Relação de Funcionários.xlsx"), null, true),
+				    #"Relação Funcionários_Sheet" = Fonte{[Item="Relação Funcionários",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Relação Funcionários_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Matricula", Int64.Type}, {"Código Unidade Organizacional", Int64.Type}, {"Descrição Unidade Organizacional", type text}, {"Filtro Área", type text}, {"Filtro Perfil", type text}, {"Tempo de casa", type text}, {"Gênero", type text}, {"Instrução", type text}, {"Column9", type any}, {"Column10", type any}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Column9", "Column10"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Colunas Removidas",{{"Matricula", type text}}),
+				    #"Consulta Acrescentada" = Table.Combine({#"Tipo Alterado1", F_Treinamentos}),
+				    #"Colunas Mescladas" = Table.CombineColumns(#"Consulta Acrescentada",{"ID_Matrículas", "Matricula"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"ID_Matrícula"),
+				    #"Colunas Mescladas1" = Table.CombineColumns(#"Colunas Mescladas",{"Filtro Área", "Área"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Área.1"),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Colunas Mescladas1",{{"Área.1", "Área"}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Colunas Renomeadas", each true),
+				    #"Colunas Removidas1" = Table.RemoveColumns(#"Linhas Filtradas",{"Código de Fornecedor SAP", "Curso", "Data Início/Treinamento", "Data Fim", "Carga horária", "Tipo de Programa", "Tema do Treinamento", "Status"}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Colunas Removidas1", {"ID_Matrícula"}),
+				    #"Colunas Renomeadas1" = Table.RenameColumns(#"Duplicatas Removidas",{{"ID_Matrícula", "ID_Matrículas"}}),
+				    #"Duplicatas Removidas1" = Table.Distinct(#"Colunas Renomeadas1", {"ID_Matrículas"}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Duplicatas Removidas1",null,"Sem Identificação",Replacer.ReplaceValue,{"Descrição Unidade Organizacional"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído","Sem Identificação","NÃO IDENTIFICADO",Replacer.ReplaceText,{"Descrição Unidade Organizacional"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","M","Masculino",Replacer.ReplaceText,{"Gênero"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2","Masculinoasculino","Masculino",Replacer.ReplaceText,{"Gênero"}),
+				    #"Valor Substituído4" = Table.ReplaceValue(#"Valor Substituído3","masculino","Masculino",Replacer.ReplaceText,{"Gênero"}),
+				    #"Valor Substituído5" = Table.ReplaceValue(#"Valor Substituído4",null,"Não declarado",Replacer.ReplaceValue,{"Gênero"}),
+				    #"Dividir Coluna por Delimitador" = Table.SplitColumn(#"Valor Substituído5", "Tempo de casa", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.None, false), {"Tempo de casa.1", "Tempo de casa.2"}),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Dividir Coluna por Delimitador",{{"Tempo de casa.1", Int64.Type}, {"Tempo de casa.2", type text}}),
+				    #"Colunas Renomeadas2" = Table.RenameColumns(#"Tipo Alterado2",{{"Tempo de casa.1", "Tempo de casa_Ano"}, {"Tempo de casa.2", "Descrição Anos"}})
+				in
+				    #"Colunas Renomeadas2"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

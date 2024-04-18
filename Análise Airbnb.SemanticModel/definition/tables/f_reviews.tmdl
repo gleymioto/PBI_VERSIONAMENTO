@@ -1,0 +1,81 @@
+table f_reviews
+	lineageTag: abb24f5a-a77d-4348-a6fd-31be6726fa85
+
+	column listing_id
+		dataType: string
+		lineageTag: 966f02a0-a36d-4672-a129-59a4e4a6b64b
+		summarizeBy: none
+		sourceColumn: listing_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 821f57a1-0d97-4ee7-aa0e-53984fa43073
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fb2ba303-5508-47ef-8973-01583e5558d6
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column reviewer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 740a34bb-0c46-46e8-a6df-7fc7dd66e788
+		summarizeBy: sum
+		sourceColumn: reviewer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column reviewer_name
+		dataType: string
+		lineageTag: f830ed4c-345f-4f3d-9d5a-bec3589d7425
+		summarizeBy: none
+		sourceColumn: reviewer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column comments
+		dataType: string
+		lineageTag: e9bd4851-aeb7-453b-800c-87f758c20a26
+		summarizeBy: none
+		sourceColumn: comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data base'
+		dataType: string
+		lineageTag: b54b9da7-c945-4bd7-9ecc-3cbb73820821
+		summarizeBy: none
+		sourceColumn: Data base
+
+		annotation SummarizationSetBy = Automatic
+
+	partition f_reviews-90be0e18-d545-4229-8f4b-080f7457d73b = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\User\Desktop\GleyNovo\MBA FIAP\FASE 2\BASES\reviews\reviews_DEZ.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"listing_id", Int64.Type}, {"id", Int64.Type}, {"date", type date}, {"reviewer_id", Int64.Type}, {"reviewer_name", type text}, {"comments", type text}}),
+				    #"Linhas Classificadas" = Table.Sort(#"Tipo Alterado",{{"date", Order.Ascending}}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Linhas Classificadas", "Data base", each "01/12/2022"),
+				    #"Consulta Acrescentada" = Table.Combine({#"Personalização Adicionada", f_reviews_SETEMB}),
+				    #"Linhas Classificadas1" = Table.Sort(#"Consulta Acrescentada",{{"listing_id", Order.Ascending}}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Linhas Classificadas1",{{"listing_id", type text}})
+				in
+				    #"Tipo Alterado1"
+
+	annotation PBI_ResultType = Exception
+

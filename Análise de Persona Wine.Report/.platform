@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Análise de Persona Wine"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "996f9e8a-b142-4a5b-969f-1ddfc8e8ddfb"
+  }
+}

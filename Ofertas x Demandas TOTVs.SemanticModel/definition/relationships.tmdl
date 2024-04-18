@@ -1,0 +1,10 @@
+relationship 042e482a-723b-4ae4-99c6-e90ac5caa0b5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Vendas_TOTVs.DT_UPLOAD
+	toColumn: LocalDateTable_6f12660a-a366-41f3-9636-83d50f1b02bc.Date
+
+relationship c773bb27-0fc9-48a1-85a0-24a29089b764
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Vendas_TOTVs.DT_PRIM_VENCTO
+	toColumn: LocalDateTable_11d23121-5bed-4c63-90d3-85180869a451.Date
+

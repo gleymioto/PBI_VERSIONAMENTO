@@ -1,0 +1,104 @@
+table MEDIDAS
+	lineageTag: 958f06c4-15a7-4014-8307-335aa12f8709
+
+	measure 'Total de treinamentos' = COUNTROWS(F_Treinamentos)
+		formatString: 0
+		lineageTag: 6a30c729-83f8-4c44-83cb-b6cfd282b8a0
+
+	measure 'Total de Treinados' = DISTINCTCOUNT(F_Treinamentos[ID_Matrículas])
+		formatString: 0
+		lineageTag: d98a1b62-8639-4d10-8994-6fbad9309bb4
+
+	measure 'Treinamentos Último Mês' = ```
+			
+			CALCULATE(  
+			      [Total de treinamentos],
+			        D_Calendario[Data] >= EOMONTH(TODAY(), -2) + 1 && // primeiro dia do mês anterior 
+			        D_Calendario[Data] < EOMONTH(TODAY(), -1) + 1) // primeiro dia do mês atual
+			```
+		formatString: 0
+		lineageTag: d0db4a18-790e-4b33-9972-ced3ed8c6215
+
+	measure 'Status Andamento' =
+			
+			CALCULATE(
+			    [Total de treinamentos],
+			    F_Treinamentos[Status] = "Em Andamento")
+		formatString: 0
+		lineageTag: 0d53c0bc-8608-44fa-9c6e-94c068b42410
+
+	measure 'Status Concluído' =
+			
+			CALCULATE(
+			    [Total de treinamentos],
+			    F_Treinamentos[Status] = "Concluído")
+		formatString: 0
+		lineageTag: 9cd3df7b-8694-4fda-86dc-f86dbdf4d725
+
+	measure 'Status Não Iniciado' =
+			
+			CALCULATE(
+			    [Total de treinamentos],
+			    F_Treinamentos[Status] = "Não Iniciado")
+		formatString: 0
+		lineageTag: 79abb136-d3dd-4608-8c93-0dca11beb31d
+
+	measure 'Status Postergado' =
+			
+			CALCULATE(
+			    [Total de treinamentos],
+			    F_Treinamentos[Status] = "Postergado")
+		formatString: 0
+		lineageTag: 5e952928-5c8f-4998-b1e4-b53d6f2f7e30
+
+	measure 'Treinamentos Feminino' =
+			
+			Calculate(
+			    [Total de treinamentos],
+			    'D_Funcionários'[Gênero]="Feminino")
+		formatString: 0
+		lineageTag: 8c48bfb3-2a1b-4b30-affb-c8506b2e0b40
+
+	measure 'Treinamentos Masculino' =
+			
+			Calculate(
+			    [Total de treinamentos],
+			    'D_Funcionários'[Gênero]="Masculino")
+		formatString: 0
+		lineageTag: 6ec46624-6107-46ee-bdea-5f860392c5f6
+
+	measure 'Treinamentos Não declarado' =
+			
+			Calculate(
+			    [Total de treinamentos],
+			    'D_Funcionários'[Gênero]="Não Declarado")
+		formatString: 0
+		lineageTag: cce39b95-fc79-4f16-b181-117754b448c0
+
+	measure Cor_Seguimentação = ```
+			
+			SWITCH(
+			    SELECTEDVALUE(F_Treinamentos[Status]),
+			    "Concluído", "#0EC2B7", 
+			    "Em andamento", "#170551", 
+			    "Não Iniciado", "#FF5757",
+			    "#000000"
+			)
+			
+			```
+		lineageTag: 60e5085f-dac1-46cf-89a1-3aa8fd0ed47a
+
+	partition MEDIDAS = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

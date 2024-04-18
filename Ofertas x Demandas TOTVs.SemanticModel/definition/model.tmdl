@@ -1,0 +1,22 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Vendas_TOTVs","Prediction_Python"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.128.952.0 (24.04)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Vendas_TOTVs
+ref table DateTableTemplate_434add41-44f4-4f3c-9dd5-a8eaf9f67133
+ref table LocalDateTable_6f12660a-a366-41f3-9636-83d50f1b02bc
+ref table LocalDateTable_11d23121-5bed-4c63-90d3-85180869a451
+ref table Prediction_Python
+

@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Análise de Persona Wine.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

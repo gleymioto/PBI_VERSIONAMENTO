@@ -1,0 +1,238 @@
+table Python_sinistPolicial_Merge
+	lineageTag: c68689a7-e4f7-401a-ba82-97f22323f0b1
+
+	column mes
+		dataType: string
+		lineageTag: 09719b75-90c3-4982-9d39-50a9f5785771
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'HOMICÍDIO DOLOSO (2)'
+		dataType: int64
+		formatString: 0
+		lineageTag: ffce81e7-19ff-44b9-92fc-71b4ea4613e4
+		summarizeBy: sum
+		sourceColumn: HOMICÍDIO DOLOSO (2)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'HOMICÍDIO DOLOSO POR ACIDENTE DE TRÂNSITO'
+		dataType: int64
+		formatString: 0
+		lineageTag: ed5f5aec-6fa2-4b90-b3b7-e81150674251
+		summarizeBy: sum
+		sourceColumn: HOMICÍDIO DOLOSO POR ACIDENTE DE TRÂNSITO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'HOMICÍDIO CULPOSO POR ACIDENTE DE TRÂNSITO'
+		dataType: int64
+		formatString: 0
+		lineageTag: 79cae06d-c2cd-4659-a15f-9abcce99ea37
+		summarizeBy: sum
+		sourceColumn: HOMICÍDIO CULPOSO POR ACIDENTE DE TRÂNSITO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'HOMICÍDIO CULPOSO OUTROS'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9745d339-23a7-4bbd-ab8f-85173b0c303c
+		summarizeBy: sum
+		sourceColumn: HOMICÍDIO CULPOSO OUTROS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TENTATIVA DE HOMICÍDIO'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2abea2df-c3b8-492a-b52f-c9ce526ab3ab
+		summarizeBy: sum
+		sourceColumn: TENTATIVA DE HOMICÍDIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LESÃO CORPORAL SEGUIDA DE MORTE'
+		dataType: int64
+		formatString: 0
+		lineageTag: 512d8978-b1eb-4932-8b98-da135094a6fe
+		summarizeBy: sum
+		sourceColumn: LESÃO CORPORAL SEGUIDA DE MORTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LESÃO CORPORAL DOLOSA'
+		dataType: int64
+		formatString: 0
+		lineageTag: 73ca71ea-d341-402f-aa9f-3d59259ab189
+		summarizeBy: sum
+		sourceColumn: LESÃO CORPORAL DOLOSA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LESÃO CORPORAL CULPOSA POR ACIDENTE DE TRÂNSITO'
+		dataType: int64
+		formatString: 0
+		lineageTag: 26fc1288-5cbd-44b3-8c70-d8760483d064
+		summarizeBy: sum
+		sourceColumn: LESÃO CORPORAL CULPOSA POR ACIDENTE DE TRÂNSITO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LESÃO CORPORAL CULPOSA - OUTRAS'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1cffa487-16ab-468b-96e2-1665f89dc243
+		summarizeBy: sum
+		sourceColumn: LESÃO CORPORAL CULPOSA - OUTRAS
+
+		annotation SummarizationSetBy = Automatic
+
+	column LATROCÍNIO
+		dataType: int64
+		formatString: #,0
+		lineageTag: fd8c728e-eab2-46d5-b2fd-a223cd109985
+		summarizeBy: sum
+		sourceColumn: LATROCÍNIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column ESTUPRO
+		dataType: int64
+		formatString: 0
+		lineageTag: 90985a20-3e90-4f0b-abb8-6ca1e79c8607
+		summarizeBy: sum
+		sourceColumn: ESTUPRO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ESTUPRO DE VULNERÁVEL'
+		dataType: int64
+		formatString: 0
+		lineageTag: e62c8194-8281-4d81-86d6-92e0e15c1d5c
+		summarizeBy: sum
+		sourceColumn: ESTUPRO DE VULNERÁVEL
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TOTAL DE ROUBO - OUTROS (1)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 92c80bf9-1a6c-42d7-bc03-bb8a6934a390
+		summarizeBy: sum
+		sourceColumn: TOTAL DE ROUBO - OUTROS (1)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ROUBO - OUTROS'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9af098a0-a4c1-47bb-b9a0-5935e062ccfa
+		summarizeBy: sum
+		sourceColumn: ROUBO - OUTROS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ROUBO DE VEÍCULO'
+		dataType: int64
+		formatString: #,0
+		lineageTag: 520ac7fd-c44b-4724-a736-95679c998363
+		summarizeBy: sum
+		sourceColumn: ROUBO DE VEÍCULO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ROUBO A BANCO'
+		dataType: int64
+		formatString: 0
+		lineageTag: 27f6e6ba-4309-4e4c-94b7-67d56e69ffab
+		summarizeBy: sum
+		sourceColumn: ROUBO A BANCO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ROUBO DE CARGA'
+		dataType: int64
+		formatString: 0
+		lineageTag: cc4fc2d2-c679-4630-bd1d-3c731c4e18ac
+		summarizeBy: sum
+		sourceColumn: ROUBO DE CARGA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FURTO - OUTROS'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1315219a-0a80-406a-bbda-733293f03a5c
+		summarizeBy: sum
+		sourceColumn: FURTO - OUTROS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FURTO DE VEÍCULO'
+		dataType: int64
+		formatString: #,0
+		lineageTag: 507d0c9a-7ef0-4c26-8215-81d12d31d60d
+		summarizeBy: sum
+		sourceColumn: FURTO DE VEÍCULO
+
+		annotation SummarizationSetBy = Automatic
+
+	column sin_perda_parcial
+		dataType: int64
+		formatString: #,0
+		lineageTag: bb802fcd-5bc7-475f-a753-9a6a1e684883
+		summarizeBy: sum
+		sourceColumn: sin_perda_parcial
+
+		annotation SummarizationSetBy = Automatic
+
+	column sin_perda_total
+		dataType: int64
+		formatString: 0
+		lineageTag: ef2c623a-a9e0-4652-9ca6-e81e83d51807
+		summarizeBy: sum
+		sourceColumn: sin_perda_total
+
+		annotation SummarizationSetBy = Automatic
+
+	column sin_roubo
+		dataType: int64
+		formatString: #,0
+		lineageTag: da419890-36f8-4d43-a136-ac0c52001173
+		summarizeBy: sum
+		sourceColumn: sin_roubo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data = IF([mes]="Jan","01/01/2020",IF([mes]="Fev","01/02/2020",IF([mes]="Mar","01/03/2020",IF([mes]="Abr","01/04/2020",IF([mes]="Mai","01/05/2020",IF([mes]="Jun","01/06/2020",IF([mes]="Jul","01/07/2020",IF([mes]="Ago","01/08/2020",IF([mes]="Set","01/09/2020",IF([mes]="Out","01/10/2020",IF([mes]="Nov","01/11/2020","01/12/2020")))))))))))
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: b45dfcc8-6d39-4c42-b0b6-3590cafdc233
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 6333a11d-0a88-484c-acd5-d7f6c2ef898a
+			defaultHierarchy: LocalDateTable_8896c010-055e-484a-b5fa-4da8220c252c.'Hierarquia de datas'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Python_sinistPolicial_Merge-72719cd2-a8f0-4c6e-bc06-d22be1f035cb = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\gleyd\OneDrive\Documentos\atividade_gley\sinistro_policial.csv"),[Delimiter=",", Columns=23, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"mes", type text}, {"HOMICÍDIO DOLOSO (2)", Int64.Type}, {"HOMICÍDIO DOLOSO POR ACIDENTE DE TRÂNSITO", Int64.Type}, {"HOMICÍDIO CULPOSO POR ACIDENTE DE TRÂNSITO", Int64.Type}, {"HOMICÍDIO CULPOSO OUTROS", Int64.Type}, {"TENTATIVA DE HOMICÍDIO", Int64.Type}, {"LESÃO CORPORAL SEGUIDA DE MORTE", Int64.Type}, {"LESÃO CORPORAL DOLOSA", Int64.Type}, {"LESÃO CORPORAL CULPOSA POR ACIDENTE DE TRÂNSITO", Int64.Type}, {"LESÃO CORPORAL CULPOSA - OUTRAS", Int64.Type}, {"LATROCÍNIO", Int64.Type}, {"ESTUPRO", Int64.Type}, {"ESTUPRO DE VULNERÁVEL", Int64.Type}, {"TOTAL DE ROUBO - OUTROS (1)", Int64.Type}, {"ROUBO - OUTROS", Int64.Type}, {"ROUBO DE VEÍCULO", Int64.Type}, {"ROUBO A BANCO", Int64.Type}, {"ROUBO DE CARGA", Int64.Type}, {"FURTO - OUTROS", Int64.Type}, {"FURTO DE VEÍCULO", Int64.Type}, {"sin_perda_parcial", Int64.Type}, {"sin_perda_total", Int64.Type}, {"sin_roubo", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

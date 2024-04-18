@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "People Analytics Auren"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "493c98d9-2413-4b70-8f30-ccc3f6040066"
+  }
+}

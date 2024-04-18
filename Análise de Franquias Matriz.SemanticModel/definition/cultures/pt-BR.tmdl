@@ -1,0 +1,6570 @@
+culture pt-BR
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "águas_clara": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unidades EF": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unidade EF": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "UnidadesEF": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.v11": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "1": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.franquia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "Franquia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "franquia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Selecione o mês": {
+			            "State": "Generated",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.873
+			          }
+			        },
+			        {
+			          "Selecione o mê": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.68094
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "Meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.supermeta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "supermeta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "supermeta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.faturamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "faturamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "faturamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.atendido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "atendidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "atendido": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.compraram": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "compraram"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "compraram": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.ticket_médio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "Ticket Médio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket médio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.invest_mídia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "invest mídias"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "invest mídia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.alcance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "alcance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "alcance": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.lead": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "leads"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lead": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "principal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "chief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "main": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "central": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "prime": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "pointer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "clue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "tip": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.leads20": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "leads+20"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "leads+20": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lead+20": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.agendamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "agendamentos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "agendamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.conver_atend_x_compr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "conver atend x compr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conver atend x compr": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.referência_atend_x_compr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "referência atend x compr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "referência atend x compr": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.análise": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "análise"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "análise": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.conver_leads_x_agend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "conver leads x agend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conver leads x agend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "conver lead x agend": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.referência_leads_x_agend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "Referência leads x agend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "referência leads x agend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "referência lead x agend": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.faturamento_dividido_por_meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "faturamento dividido por Meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "faturamento dividido por meta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "alcance da meta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.faturamento_dividido_por_supermeta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "faturamento dividido por supermeta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "faturamento dividido por supermeta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "alcance supermeta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.compraram_dividido_por_atendidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "compraram dividido por atendidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "compraram dividido por atendidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Grande": {
+			            "State": "Suggested",
+			            "Weight": 0.873
+			          }
+			        },
+			        {
+			          "Mariana": {
+			            "State": "Suggested",
+			            "Weight": 0.873
+			          }
+			        },
+			        {
+			          "conv atend x compra": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Águas Claras": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Anápolis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Assis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Bauru": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Blumenau": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Cabo Frio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Campo Grande": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Caxias do Sul": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Chapecó": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Cuiabá": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Curitiba": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Florianópolis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Guarulhos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Jataí": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Londrina": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Marília": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Moema": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Mogi": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Passo Fundo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Pelotas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Recife": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Recreio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Ribeirão Preto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Rio Branco": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "SJC": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Setor Bueno": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Vila Mariana": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Vit. Conquista": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.agendamentos_dividido_por_leads20": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "agendamentos dividido por leads+20"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "agendamentos dividido por leads+20": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Grande": {
+			            "State": "Suggested",
+			            "Weight": 0.873
+			          }
+			        },
+			        {
+			          "Mariana": {
+			            "State": "Suggested",
+			            "Weight": 0.873
+			          }
+			        },
+			        {
+			          "conv leads x agend": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Águas Claras": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Anápolis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Assis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Blumenau": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Cabo Frio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Campo Grande": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Caxias do Sul": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Chapecó": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Cuiabá": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Curitiba": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Guarulhos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Jataí": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Londrina": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Marília": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Moema": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Mogi": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Passo Fundo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Pelotas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Recife": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Recreio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Ribeirão Preto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Rio Branco": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "SJC": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Setor Bueno": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Vila Mariana": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Florianópolis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Bauru": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Vit. Conquista": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.invest_mídias_dividido_por_leads20": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "invest mídias dividido por leads+20"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "invest mídias dividido por leads+20": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "custo do principal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "custo do chief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "custo do main": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "custo do central": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "custo do prime": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "custo do top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "custo do indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "custo do information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "custo do pointer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "custo do clue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "custo do lead": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fat_categoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fat categoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fat categoria": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fat_categoria.v11": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fat categoria",
+			          "ConceptualProperty": "1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "1": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fat_categoria.franquia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fat categoria",
+			          "ConceptualProperty": "Franquia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "franquia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fat_categoria.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fat categoria",
+			          "ConceptualProperty": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fat_categoria.procedimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fat categoria",
+			          "ConceptualProperty": "procedimento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "procedimento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fat_categoria.valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fat categoria",
+			          "ConceptualProperty": "Valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pluck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spirit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nerve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "fat_categoria.medida_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fat categoria",
+			          "ConceptualProperty": "Medida 2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida 2": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LED junto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LED_juntos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.v11": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "1": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.franquia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Franquia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "franquia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.profissional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Profissional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "profissional": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.data_comanda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Data Comanda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data comanda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information comanda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact comanda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info comanda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic comanda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document comanda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure comanda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record comanda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "LED_junção.data_comanda.variation.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "VariationSource": "Data Comanda",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.data_comanda.variation.hierarquia_de_data.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "VariationSource": "Data Comanda",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data comanda ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information comanda ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact comanda ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info comanda ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic comanda ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document comanda ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure comanda ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record comanda ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "VariationSource": "Data Comanda",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data comanda trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information comanda trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact comanda trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info comanda trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic comanda trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document comanda trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure comanda trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record comanda trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.data_comanda.variation.hierarquia_de_data.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "VariationSource": "Data Comanda",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data comanda mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information comanda mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact comanda mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info comanda mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic comanda mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document comanda mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure comanda mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record comanda mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.data_comanda.variation.hierarquia_de_data.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "VariationSource": "Data Comanda",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data comanda dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information comanda dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact comanda dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info comanda dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic comanda dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document comanda dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure comanda dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record comanda dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.número_comanda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Número Comanda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "número comanda": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.serviço": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Serviço"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "serviço": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.busca_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "busca base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "busca base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "busca headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "busca center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "busca seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "busca station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "busca pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.ob": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "obs"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ob": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.cortesia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "cortesia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cortesia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.compareceram_COM_voucher": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompareceramCOMVoucher"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "compareceram COM voucher": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CompareceramCOMVoucher": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Voucher": {
+			            "State": "Suggested",
+			            "Weight": 0.873
+			          }
+			        },
+			        {
+			          "compareceram com coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "compareceram com chit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "com coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "com chit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "compareceram com ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "compareceram com receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "compareceram com check": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "chit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "com ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Com Voucher": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.CompareceramCOMVoucher_dividido_por_contagem_de_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompareceramCOMVoucher dividido por Contagem de Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CompareceramCOMVoucher dividido por contagem de cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Conversão": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.comp_SE_mvoucher": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompareceramSEMvoucher"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "compareceram SE mvoucher": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CompareceramSEMvoucher": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "sem coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sem chit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sem ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sem receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sem check": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Sem Voucher": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.CompareceramSEMVoucher_dividido_por_contagem_de_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompareceramSEMVoucher dividido por Contagem de Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CompareceramSEMVoucher dividido por contagem de cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sem coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sem chit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sem ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sem receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sem check": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Sem Voucher": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.compraram_COM_voucher": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompraramCOMVoucher"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "compraram COM voucher": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CompraramCOMVoucher": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Voucher": {
+			            "State": "Suggested",
+			            "Weight": 0.873
+			          }
+			        },
+			        {
+			          "compraram com coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "compraram com chit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "com coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "com chit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "compraram com ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "compraram com receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "compraram com check": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "chit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "com ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Com Voucher": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.CompraramCOMVoucher_dividido_por_contagem_de_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompraramCOMVoucher dividido por Contagem de Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CompraramCOMVoucher dividido por contagem de cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Conversão": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.compraram_SE_mvoucher": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompraramSEMvoucher"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "compraram SE mvoucher": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CompraramSEMvoucher": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "sem coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sem chit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sem ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sem receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sem check": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Sem Voucher": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.CompraramSEMvoucher_dividido_por_contagem_de_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompraramSEMvoucher dividido por Contagem de Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CompraramSEMvoucher dividido por contagem de cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Conversão": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.total_de_vendas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Total de Vendas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total de vendas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate de venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall de venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.CompraramCOMVoucher_dividido_por_CompareceramCOMVoucher": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompraramCOMVoucher dividido por CompareceramCOMVoucher"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CompraramCOMVoucher dividido por CompareceramCOMVoucher": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.CompraramSEMvoucher_dividido_por_CompareceramSEMvoucher": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompraramSEMvoucher dividido por CompareceramSEMvoucher"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CompraramSEMvoucher dividido por CompareceramSEMvoucher": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.total_de_vendas_dividido_por_CompraramCOMVoucher": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Total de Vendas dividido por CompraramCOMVoucher"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total de vendas dividido por CompraramCOMVoucher": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.total_de_vendas_dividido_por_CompraramSEMvoucher": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Total de Vendas dividido por CompraramSEMvoucher"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total de vendas dividido por CompraramSEMvoucher": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "data"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "águas_clara.data.variation.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "VariationSource": "data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.data.variation.hierarquia_de_data.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "VariationSource": "data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.data.variation.hierarquia_de_data.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "VariationSource": "data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.data.variation.hierarquia_de_data.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "VariationSource": "data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.data.variation.hierarquia_de_data.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "VariationSource": "data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.total_de_vendas_dividido_por_contagem_de_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Total de Vendas dividido por Contagem de Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total de vendas dividido por contagem de cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage geral de venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct geral de venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "% Geral de Vendas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.COMPRASSEMvoucher_dividido_por_COMPRASSEMvoucher": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "COMPRASSEMvoucher dividido por COMPRASSEMvoucher"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "COMPRASSEMvoucher dividido por COMPRASSEMvoucher": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.total_de_vendas_dividido_por_CompareceramSEMvoucher": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "Total de Vendas dividido por CompareceramSEMvoucher"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total de vendas dividido por CompareceramSEMvoucher": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.CompareceramSEMvoucher_dividido_por_total_de_vendas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompareceramSEMvoucher dividido por Total de Vendas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CompareceramSEMvoucher dividido por total de vendas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "LED_junção.CompraramSEMvoucher_dividido_por_CompareceramSEMvoucher_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "LED_juntos",
+			          "ConceptualProperty": "CompraramSEMvoucher dividido por CompareceramSEMvoucher 2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CompraramSEMvoucher dividido por CompareceramSEMvoucher 2": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.agendamentos_menos_atendidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "agendamentos menos atendidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "agendamentos menos atendidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pacientes faltantes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "águas_clara.agendamentos_menos_atendidos_dividido_por_agendamentos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UnidadesEF",
+			          "ConceptualProperty": "agendamentos menos atendidos dividido por agendamentos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "agendamentos menos atendidos dividido por agendamentos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% faltantes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "águas_clara_data_variation_hierarquia_de_data_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara.data.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data"
+			          }
+			        },
+			        "águas_clara.data.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_data_variation_hierarquia_de_data_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara.data.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data"
+			          }
+			        },
+			        "águas_clara.data.variation.hierarquia_de_data.ano": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_data_has_variation_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara.data": {
+			          "Target": {
+			            "Entity": "águas_clara.data"
+			          }
+			        },
+			        "águas_clara.data.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_data_comanda_variation_hierarquia_de_data_mê_has_LED_junção_data_comanda_variation_hierarquia_de_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção.data_comanda.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data.mê"
+			          }
+			        },
+			        "LED_junção.data_comanda.variation.hierarquia_de_data.dia": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.mê"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.dia"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_data_comanda_variation_hierarquia_de_data_trimestre_has_LED_junção_data_comanda_variation_hierarquia_de_data_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre"
+			          }
+			        },
+			        "LED_junção.data_comanda.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.mê"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_data_comanda_variation_hierarquia_de_data_ano_has_LED_junção_data_comanda_variation_hierarquia_de_data_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção.data_comanda.variation.hierarquia_de_data.ano": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data.ano"
+			          }
+			        },
+			        "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.ano"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_data_comanda_variation_hierarquia_de_data_has_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção.data_comanda.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data"
+			          }
+			        },
+			        "LED_junção.data_comanda.variation.hierarquia_de_data.dia": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_data_comanda_variation_hierarquia_de_data_has_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção.data_comanda.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data"
+			          }
+			        },
+			        "LED_junção.data_comanda.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_data_comanda_variation_hierarquia_de_data_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção.data_comanda.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data"
+			          }
+			        },
+			        "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_data_comanda_variation_hierarquia_de_data_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção.data_comanda.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data"
+			          }
+			        },
+			        "LED_junção.data_comanda.variation.hierarquia_de_data.ano": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_data_comanda_has_variation_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção.data_comanda": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda"
+			          }
+			        },
+			        "LED_junção.data_comanda.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda.variation.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção.data_comanda"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda.variation.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_fat_categoria": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "fat_categoria": {
+			          "Target": {
+			            "Entity": "fat_categoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "fat_categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_agendamentos_menos_atendidos_dividido_por_agendamentos": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.agendamentos_menos_atendidos_dividido_por_agendamentos": {
+			          "Target": {
+			            "Entity": "águas_clara.agendamentos_menos_atendidos_dividido_por_agendamentos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.agendamentos_menos_atendidos_dividido_por_agendamentos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_agendamentos_menos_atendidos": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.agendamentos_menos_atendidos": {
+			          "Target": {
+			            "Entity": "águas_clara.agendamentos_menos_atendidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.agendamentos_menos_atendidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_CompraramSEMvoucher_dividido_por_CompareceramSEMvoucher_2": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.CompraramSEMvoucher_dividido_por_CompareceramSEMvoucher_2": {
+			          "Target": {
+			            "Entity": "LED_junção.CompraramSEMvoucher_dividido_por_CompareceramSEMvoucher_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.CompraramSEMvoucher_dividido_por_CompareceramSEMvoucher_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_CompareceramSEMvoucher_dividido_por_total_de_vendas": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.CompareceramSEMvoucher_dividido_por_total_de_vendas": {
+			          "Target": {
+			            "Entity": "LED_junção.CompareceramSEMvoucher_dividido_por_total_de_vendas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.CompareceramSEMvoucher_dividido_por_total_de_vendas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_total_de_vendas_dividido_por_CompareceramSEMvoucher": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.total_de_vendas_dividido_por_CompareceramSEMvoucher": {
+			          "Target": {
+			            "Entity": "LED_junção.total_de_vendas_dividido_por_CompareceramSEMvoucher"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.total_de_vendas_dividido_por_CompareceramSEMvoucher"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_COMPRASSEMvoucher_dividido_por_COMPRASSEMvoucher": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.COMPRASSEMvoucher_dividido_por_COMPRASSEMvoucher": {
+			          "Target": {
+			            "Entity": "LED_junção.COMPRASSEMvoucher_dividido_por_COMPRASSEMvoucher"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.COMPRASSEMvoucher_dividido_por_COMPRASSEMvoucher"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_total_de_vendas_dividido_por_contagem_de_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.total_de_vendas_dividido_por_contagem_de_cliente": {
+			          "Target": {
+			            "Entity": "LED_junção.total_de_vendas_dividido_por_contagem_de_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.total_de_vendas_dividido_por_contagem_de_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_data": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.data": {
+			          "Target": {
+			            "Entity": "águas_clara.data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_total_de_vendas_dividido_por_CompraramSEMvoucher": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.total_de_vendas_dividido_por_CompraramSEMvoucher": {
+			          "Target": {
+			            "Entity": "LED_junção.total_de_vendas_dividido_por_CompraramSEMvoucher"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.total_de_vendas_dividido_por_CompraramSEMvoucher"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_total_de_vendas_dividido_por_CompraramCOMVoucher": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.total_de_vendas_dividido_por_CompraramCOMVoucher": {
+			          "Target": {
+			            "Entity": "LED_junção.total_de_vendas_dividido_por_CompraramCOMVoucher"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.total_de_vendas_dividido_por_CompraramCOMVoucher"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_CompraramSEMvoucher_dividido_por_CompareceramSEMvoucher": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.CompraramSEMvoucher_dividido_por_CompareceramSEMvoucher": {
+			          "Target": {
+			            "Entity": "LED_junção.CompraramSEMvoucher_dividido_por_CompareceramSEMvoucher"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.CompraramSEMvoucher_dividido_por_CompareceramSEMvoucher"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_CompraramCOMVoucher_dividido_por_CompareceramCOMVoucher": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.CompraramCOMVoucher_dividido_por_CompareceramCOMVoucher": {
+			          "Target": {
+			            "Entity": "LED_junção.CompraramCOMVoucher_dividido_por_CompareceramCOMVoucher"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.CompraramCOMVoucher_dividido_por_CompareceramCOMVoucher"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_total_de_vendas": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.total_de_vendas": {
+			          "Target": {
+			            "Entity": "LED_junção.total_de_vendas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.total_de_vendas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_CompraramSEMvoucher_dividido_por_contagem_de_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.CompraramSEMvoucher_dividido_por_contagem_de_cliente": {
+			          "Target": {
+			            "Entity": "LED_junção.CompraramSEMvoucher_dividido_por_contagem_de_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.CompraramSEMvoucher_dividido_por_contagem_de_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_compraram_SE_mvoucher": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.compraram_SE_mvoucher": {
+			          "Target": {
+			            "Entity": "LED_junção.compraram_SE_mvoucher"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.compraram_SE_mvoucher"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_CompraramCOMVoucher_dividido_por_contagem_de_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.CompraramCOMVoucher_dividido_por_contagem_de_cliente": {
+			          "Target": {
+			            "Entity": "LED_junção.CompraramCOMVoucher_dividido_por_contagem_de_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.CompraramCOMVoucher_dividido_por_contagem_de_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_compraram_COM_voucher": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.compraram_COM_voucher": {
+			          "Target": {
+			            "Entity": "LED_junção.compraram_COM_voucher"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.compraram_COM_voucher"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_CompareceramSEMVoucher_dividido_por_contagem_de_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.CompareceramSEMVoucher_dividido_por_contagem_de_cliente": {
+			          "Target": {
+			            "Entity": "LED_junção.CompareceramSEMVoucher_dividido_por_contagem_de_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.CompareceramSEMVoucher_dividido_por_contagem_de_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_comp_SE_mvoucher": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.comp_SE_mvoucher": {
+			          "Target": {
+			            "Entity": "LED_junção.comp_SE_mvoucher"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.comp_SE_mvoucher"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_CompareceramCOMVoucher_dividido_por_contagem_de_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.CompareceramCOMVoucher_dividido_por_contagem_de_cliente": {
+			          "Target": {
+			            "Entity": "LED_junção.CompareceramCOMVoucher_dividido_por_contagem_de_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.CompareceramCOMVoucher_dividido_por_contagem_de_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_compareceram_COM_voucher": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.compareceram_COM_voucher": {
+			          "Target": {
+			            "Entity": "LED_junção.compareceram_COM_voucher"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.compareceram_COM_voucher"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_cortesia": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.cortesia": {
+			          "Target": {
+			            "Entity": "LED_junção.cortesia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.cortesia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_ob": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.ob": {
+			          "Target": {
+			            "Entity": "LED_junção.ob"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.ob"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_busca_base": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.busca_base": {
+			          "Target": {
+			            "Entity": "LED_junção.busca_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.busca_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_total": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.total": {
+			          "Target": {
+			            "Entity": "LED_junção.total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "LED_junção.total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_serviço": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.serviço": {
+			          "Target": {
+			            "Entity": "LED_junção.serviço"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.serviço"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_número_comanda": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.número_comanda": {
+			          "Target": {
+			            "Entity": "LED_junção.número_comanda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.número_comanda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.mê": {
+			          "Target": {
+			            "Entity": "LED_junção.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_data_comanda": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.data_comanda": {
+			          "Target": {
+			            "Entity": "LED_junção.data_comanda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.data_comanda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_profissional": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.profissional": {
+			          "Target": {
+			            "Entity": "LED_junção.profissional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.profissional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_franquia": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.franquia": {
+			          "Target": {
+			            "Entity": "LED_junção.franquia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.franquia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.cliente": {
+			          "Target": {
+			            "Entity": "LED_junção.cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "LED_junção_has_v11": {
+			      "Binding": {
+			        "ConceptualEntity": "LED_juntos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "LED_junção": {
+			          "Target": {
+			            "Entity": "LED_junção"
+			          }
+			        },
+			        "LED_junção.v11": {
+			          "Target": {
+			            "Entity": "LED_junção.v11"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "LED_junção"
+			            },
+			            "Object": {
+			              "Role": "LED_junção.v11"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fat_categoria_has_medida_2": {
+			      "Binding": {
+			        "ConceptualEntity": "fat categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fat_categoria": {
+			          "Target": {
+			            "Entity": "fat_categoria"
+			          }
+			        },
+			        "fat_categoria.medida_2": {
+			          "Target": {
+			            "Entity": "fat_categoria.medida_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fat_categoria"
+			            },
+			            "Object": {
+			              "Role": "fat_categoria.medida_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fat_categoria_has_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "fat categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fat_categoria": {
+			          "Target": {
+			            "Entity": "fat_categoria"
+			          }
+			        },
+			        "fat_categoria.valor": {
+			          "Target": {
+			            "Entity": "fat_categoria.valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fat_categoria"
+			            },
+			            "Object": {
+			              "Role": "fat_categoria.valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "fat_categoria"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "fat_categoria.valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fat_categoria_has_procedimento": {
+			      "Binding": {
+			        "ConceptualEntity": "fat categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fat_categoria": {
+			          "Target": {
+			            "Entity": "fat_categoria"
+			          }
+			        },
+			        "fat_categoria.procedimento": {
+			          "Target": {
+			            "Entity": "fat_categoria.procedimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fat_categoria"
+			            },
+			            "Object": {
+			              "Role": "fat_categoria.procedimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fat_categoria_has_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fat categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fat_categoria": {
+			          "Target": {
+			            "Entity": "fat_categoria"
+			          }
+			        },
+			        "fat_categoria.mê": {
+			          "Target": {
+			            "Entity": "fat_categoria.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fat_categoria"
+			            },
+			            "Object": {
+			              "Role": "fat_categoria.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fat_categoria_has_franquia": {
+			      "Binding": {
+			        "ConceptualEntity": "fat categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fat_categoria": {
+			          "Target": {
+			            "Entity": "fat_categoria"
+			          }
+			        },
+			        "fat_categoria.franquia": {
+			          "Target": {
+			            "Entity": "fat_categoria.franquia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fat_categoria"
+			            },
+			            "Object": {
+			              "Role": "fat_categoria.franquia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fat_categoria_has_v11": {
+			      "Binding": {
+			        "ConceptualEntity": "fat categoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fat_categoria": {
+			          "Target": {
+			            "Entity": "fat_categoria"
+			          }
+			        },
+			        "fat_categoria.v11": {
+			          "Target": {
+			            "Entity": "fat_categoria.v11"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fat_categoria"
+			            },
+			            "Object": {
+			              "Role": "fat_categoria.v11"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_invest_mídias_dividido_por_leads20": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.invest_mídias_dividido_por_leads20": {
+			          "Target": {
+			            "Entity": "águas_clara.invest_mídias_dividido_por_leads20"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.invest_mídias_dividido_por_leads20"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_agendamentos_dividido_por_leads20": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.agendamentos_dividido_por_leads20": {
+			          "Target": {
+			            "Entity": "águas_clara.agendamentos_dividido_por_leads20"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.agendamentos_dividido_por_leads20"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_compraram_dividido_por_atendidos": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.compraram_dividido_por_atendidos": {
+			          "Target": {
+			            "Entity": "águas_clara.compraram_dividido_por_atendidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.compraram_dividido_por_atendidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_faturamento_dividido_por_supermeta": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.faturamento_dividido_por_supermeta": {
+			          "Target": {
+			            "Entity": "águas_clara.faturamento_dividido_por_supermeta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.faturamento_dividido_por_supermeta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_faturamento_dividido_por_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.faturamento_dividido_por_meta": {
+			          "Target": {
+			            "Entity": "águas_clara.faturamento_dividido_por_meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.faturamento_dividido_por_meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_referência_leads_x_agend": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.referência_leads_x_agend": {
+			          "Target": {
+			            "Entity": "águas_clara.referência_leads_x_agend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.referência_leads_x_agend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_conver_leads_x_agend": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.conver_leads_x_agend": {
+			          "Target": {
+			            "Entity": "águas_clara.conver_leads_x_agend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.conver_leads_x_agend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_análise": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.análise": {
+			          "Target": {
+			            "Entity": "águas_clara.análise"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.análise"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_referência_atend_x_compr": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.referência_atend_x_compr": {
+			          "Target": {
+			            "Entity": "águas_clara.referência_atend_x_compr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.referência_atend_x_compr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_conver_atend_x_compr": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.conver_atend_x_compr": {
+			          "Target": {
+			            "Entity": "águas_clara.conver_atend_x_compr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.conver_atend_x_compr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_agendamento": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.agendamento": {
+			          "Target": {
+			            "Entity": "águas_clara.agendamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.agendamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_leads20": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.leads20": {
+			          "Target": {
+			            "Entity": "águas_clara.leads20"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.leads20"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_lead": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.lead": {
+			          "Target": {
+			            "Entity": "águas_clara.lead"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.lead"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_alcance": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.alcance": {
+			          "Target": {
+			            "Entity": "águas_clara.alcance"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.alcance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_invest_mídia": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.invest_mídia": {
+			          "Target": {
+			            "Entity": "águas_clara.invest_mídia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.invest_mídia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "águas_clara.invest_mídia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_ticket_médio": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.ticket_médio": {
+			          "Target": {
+			            "Entity": "águas_clara.ticket_médio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.ticket_médio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "águas_clara.ticket_médio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_compraram": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.compraram": {
+			          "Target": {
+			            "Entity": "águas_clara.compraram"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.compraram"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_atendido": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.atendido": {
+			          "Target": {
+			            "Entity": "águas_clara.atendido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.atendido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_faturamento": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.faturamento": {
+			          "Target": {
+			            "Entity": "águas_clara.faturamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.faturamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_supermeta": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.supermeta": {
+			          "Target": {
+			            "Entity": "águas_clara.supermeta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.supermeta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.meta": {
+			          "Target": {
+			            "Entity": "águas_clara.meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_franquia": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.franquia": {
+			          "Target": {
+			            "Entity": "águas_clara.franquia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.franquia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_has_v11": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara": {
+			          "Target": {
+			            "Entity": "águas_clara"
+			          }
+			        },
+			        "águas_clara.v11": {
+			          "Target": {
+			            "Entity": "águas_clara.v11"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.v11"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_data_variation_hierarquia_de_data_has_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara.data.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data"
+			          }
+			        },
+			        "águas_clara.data.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_data_variation_hierarquia_de_data_has_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara.data.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data"
+			          }
+			        },
+			        "águas_clara.data.variation.hierarquia_de_data.dia": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_data_variation_hierarquia_de_data_ano_has_águas_clara_data_variation_hierarquia_de_data_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara.data.variation.hierarquia_de_data.ano": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data.ano"
+			          }
+			        },
+			        "águas_clara.data.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.ano"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_data_variation_hierarquia_de_data_trimestre_has_águas_clara_data_variation_hierarquia_de_data_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara.data.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data.trimestre"
+			          }
+			        },
+			        "águas_clara.data.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.mê"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "águas_clara_data_variation_hierarquia_de_data_mê_has_águas_clara_data_variation_hierarquia_de_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "UnidadesEF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "águas_clara.data.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data.mê"
+			          }
+			        },
+			        "águas_clara.data.variation.hierarquia_de_data.dia": {
+			          "Target": {
+			            "Entity": "águas_clara.data.variation.hierarquia_de_data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.mê"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.dia"
+			            },
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "águas_clara.data.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

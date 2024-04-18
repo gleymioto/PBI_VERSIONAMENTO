@@ -1,0 +1,58 @@
+table Host_bairros
+	lineageTag: 2dcf224f-2814-4458-932f-78d5009a4dc2
+
+	column host_neighbourhood
+		dataType: string
+		lineageTag: 4c909e07-bbcf-4712-9974-924a644f7f29
+		summarizeBy: none
+		sourceColumn: host_neighbourhood
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Host_bairros-3e077a86-ffa5-4574-b4c8-2e40ccc7f4a3 = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\User\Desktop\GleyNovo\MBA FIAP\FASE 2\BASES\listings\listings_DEZ.csv"),[Delimiter=",", Columns=75, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"id", type text}, {"listing_url", type text}, {"scrape_id", type text}, {"last_scraped", type date}, {"source", type text}, {"name", type text}, {"description", type text}, {"neighborhood_overview", type text}, {"picture_url", type text}, {"host_id", Int64.Type}, {"host_url", type text}, {"host_name", type text}, {"host_since", type date}, {"host_location", type text}, {"host_about", type text}, {"host_response_time", type text}, {"host_response_rate", type text}, {"host_acceptance_rate", type text}, {"host_is_superhost", type text}, {"host_thumbnail_url", type text}, {"host_picture_url", type text}, {"host_neighbourhood", type text}, {"host_listings_count", Int64.Type}, {"host_total_listings_count", Int64.Type}, {"host_verifications", type text}, {"host_has_profile_pic", type text}, {"host_identity_verified", type text}, {"neighbourhood", type text}, {"neighbourhood_cleansed", type text}, {"neighbourhood_group_cleansed", type text}, {"latitude", Int64.Type}, {"longitude", Int64.Type}, {"property_type", type text}, {"room_type", type text}, {"accommodates", Int64.Type}, {"bathrooms", type text}, {"bathrooms_text", type text}, {"bedrooms", Int64.Type}, {"beds", Int64.Type}, {"amenities", type text}, {"price", type text}, {"minimum_nights", Int64.Type}, {"maximum_nights", Int64.Type}, {"minimum_minimum_nights", Int64.Type}, {"maximum_minimum_nights", Int64.Type}, {"minimum_maximum_nights", Int64.Type}, {"maximum_maximum_nights", Int64.Type}, {"minimum_nights_avg_ntm", Int64.Type}, {"maximum_nights_avg_ntm", Int64.Type}, {"calendar_updated", type text}, {"has_availability", type text}, {"availability_30", Int64.Type}, {"availability_60", Int64.Type}, {"availability_90", Int64.Type}, {"availability_365", Int64.Type}, {"calendar_last_scraped", type date}, {"number_of_reviews", Int64.Type}, {"number_of_reviews_ltm", Int64.Type}, {"number_of_reviews_l30d", Int64.Type}, {"first_review", type date}, {"last_review", type date}, {"review_scores_rating", Int64.Type}, {"review_scores_accuracy", Int64.Type}, {"review_scores_cleanliness", Int64.Type}, {"review_scores_checkin", Int64.Type}, {"review_scores_communication", Int64.Type}, {"review_scores_location", Int64.Type}, {"review_scores_value", Int64.Type}, {"license", type text}, {"instant_bookable", type text}, {"calculated_host_listings_count", Int64.Type}, {"calculated_host_listings_count_entire_homes", Int64.Type}, {"calculated_host_listings_count_private_rooms", Int64.Type}, {"calculated_host_listings_count_shared_rooms", Int64.Type}, {"reviews_per_month", Int64.Type}}),
+				    #"Linhas Classificadas" = Table.Sort(#"Tipo Alterado",{{"calendar_last_scraped", Order.Descending}}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Linhas Classificadas", "Data", each "01/12/2022"),
+				    #"Consulta Acrescentada" = Table.Combine({#"Personalização Adicionada", listings_SETEMB}),
+				    #"Linhas Classificadas1" = Table.Sort(#"Consulta Acrescentada",{{"id", Order.Ascending}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Linhas Classificadas1",{{"id", "listing_id"}}),
+				    #"Linhas Classificadas2" = Table.Sort(#"Colunas Renomeadas",{{"Data", Order.Ascending}}),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Linhas Classificadas2",{"listing_id", "listing_url", "scrape_id", "last_scraped", "source", "name", "description", "neighborhood_overview", "picture_url", "host_id", "host_url", "host_name", "host_since", "host_location", "host_about", "host_response_time", "host_response_rate", "host_acceptance_rate", "host_is_superhost", "host_thumbnail_url", "host_picture_url", "host_neighbourhood", "host_listings_count", "host_total_listings_count", "host_verifications", "host_has_profile_pic", "host_identity_verified", "neighbourhood", "neighbourhood_cleansed", "neighbourhood_group_cleansed", "latitude", "longitude", "property_type", "room_type", "accommodates", "bathrooms", "bathrooms_text", "bedrooms", "beds", "amenities", "price", "minimum_nights", "maximum_nights", "minimum_minimum_nights", "maximum_minimum_nights", "minimum_maximum_nights", "maximum_maximum_nights", "minimum_nights_avg_ntm", "maximum_nights_avg_ntm", "calendar_updated", "has_availability", "availability_30", "availability_60", "availability_90", "availability_365", "calendar_last_scraped", "number_of_reviews", "number_of_reviews_ltm", "number_of_reviews_l30d", "first_review", "last_review", "review_scores_rating", "review_scores_accuracy", "review_scores_cleanliness", "review_scores_checkin", "review_scores_communication", "review_scores_location", "review_scores_value", "license", "instant_bookable", "calculated_host_listings_count", "Data", "calculated_host_listings_count_entire_homes", "calculated_host_listings_count_private_rooms", "calculated_host_listings_count_shared_rooms", "reviews_per_month"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Colunas Reordenadas",{{"latitude", type text}, {"longitude", type text}, {"listing_id", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado1",{"neighbourhood"}),
+				    #"Personalização Adicionada1" = Table.AddColumn(#"Colunas Removidas", "Estado", each "Rio de Janeiro"),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Estado", type text}}),
+				    #"Personalização Adicionada2" = Table.AddColumn(#"Tipo Alterado2", "País", each "Brasil"),
+				    #"Tipo Alterado3" = Table.TransformColumnTypes(#"Personalização Adicionada2",{{"País", type text}}),
+				    #"Coluna Duplicada" = Table.DuplicateColumn(#"Tipo Alterado3", "price", "price - Copiar"),
+				    #"Colunas Renomeadas1" = Table.RenameColumns(#"Coluna Duplicada",{{"price - Copiar", "Preço (dólar)"}}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Colunas Renomeadas1","$","",Replacer.ReplaceText,{"Preço (dólar)"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído",",","|",Replacer.ReplaceText,{"Preço (dólar)"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1",".",",",Replacer.ReplaceText,{"Preço (dólar)"}),
+				    #"Valor Substituído6" = Table.ReplaceValue(#"Valor Substituído2","|","",Replacer.ReplaceText,{"Preço (dólar)"}),
+				    #"Dividir Coluna pela Posição" = Table.SplitColumn(#"Valor Substituído6", "latitude", Splitter.SplitTextByPositions({0, 3}, false), {"latitude.1", "latitude.2"}),
+				    #"Colunas Mescladas" = Table.CombineColumns(#"Dividir Coluna pela Posição",{"latitude.1", "latitude.2"},Combiner.CombineTextByDelimiter(",", QuoteStyle.None),"Latitude"),
+				    #"Dividir Coluna pela Posição1" = Table.SplitColumn(#"Colunas Mescladas", "longitude", Splitter.SplitTextByPositions({0, 3}, false), {"longitude.1", "longitude.2"}),
+				    #"Tipo Alterado4" = Table.TransformColumnTypes(#"Dividir Coluna pela Posição1",{{"longitude.1", Int64.Type}, {"longitude.2", Int64.Type}}),
+				    #"Colunas Mescladas1" = Table.CombineColumns(Table.TransformColumnTypes(#"Tipo Alterado4", {{"longitude.1", type text}, {"longitude.2", type text}}, "pt-BR"),{"longitude.1", "longitude.2"},Combiner.CombineTextByDelimiter(",", QuoteStyle.None),"Longitude"),
+				    #"Tipo Alterado5" = Table.TransformColumnTypes(#"Colunas Mescladas1",{{"Latitude", type number}, {"Longitude", type number}, {"Preço (dólar)", Currency.Type}}),
+				    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Tipo Alterado5", "Cluster Turista/Residente", each if [maximum_nights] <= 30 then "Turista" else "Residente/Longa Duração"),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Coluna Condicional Adicionada","","Não informado",Replacer.ReplaceValue,{"host_location"}),
+				    #"Valor Substituído4" = Table.ReplaceValue(#"Valor Substituído3","State of Rio de Janeiro, Brazil","Rio de Janeiro, Brazil",Replacer.ReplaceText,{"host_location"}),
+				    #"Valor Substituído5" = Table.ReplaceValue(#"Valor Substituído4","Rio, Brazil","Rio de Janeiro, Brazil",Replacer.ReplaceText,{"host_location"}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Valor Substituído5", each [#"Preço (dólar)"] < 99000),
+				    #"Colunas Removidas1" = Table.RemoveColumns(#"Linhas Filtradas",{"listing_id", "listing_url", "scrape_id", "last_scraped", "source", "name", "description", "neighborhood_overview", "picture_url", "host_id", "host_url", "host_name", "host_since", "host_location", "host_about", "host_response_time", "host_response_rate", "host_acceptance_rate", "host_is_superhost", "host_thumbnail_url", "host_picture_url", "host_listings_count", "host_total_listings_count", "host_verifications", "host_has_profile_pic", "host_identity_verified", "neighbourhood_cleansed", "neighbourhood_group_cleansed", "Latitude", "Longitude", "property_type", "room_type", "accommodates", "bathrooms", "bathrooms_text", "bedrooms", "beds", "amenities", "price", "minimum_nights", "maximum_nights", "minimum_minimum_nights", "maximum_minimum_nights", "minimum_maximum_nights", "maximum_maximum_nights", "minimum_nights_avg_ntm", "maximum_nights_avg_ntm", "calendar_updated", "has_availability", "availability_30", "availability_60", "availability_90", "availability_365", "calendar_last_scraped", "number_of_reviews", "number_of_reviews_ltm", "number_of_reviews_l30d", "first_review", "last_review", "review_scores_rating", "review_scores_accuracy", "review_scores_cleanliness", "review_scores_checkin", "review_scores_communication", "review_scores_location", "review_scores_value", "license", "instant_bookable", "calculated_host_listings_count", "Data", "calculated_host_listings_count_entire_homes", "calculated_host_listings_count_private_rooms", "calculated_host_listings_count_shared_rooms", "reviews_per_month", "Host por acomodação", "Estado", "País", "Preço (dólar)", "Cluster Turista/Residente"}),
+				    #"Valor Substituído7" = Table.ReplaceValue(#"Colunas Removidas1","","não informado",Replacer.ReplaceValue,{"host_neighbourhood"}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Valor Substituído7", each ([host_neighbourhood] <> "não informado"))
+				in
+				    #"Linhas Filtradas1"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,15 @@
+relationship 453c7dde-56a0-4428-a5f3-c6a7648b6c20
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'vendas seguros'.data_emissao
+	toColumn: LocalDateTable_4a69e063-56f5-432d-91a4-cc04b0c77592.Date
+
+relationship 2c65e52b-8310-4c74-b2da-91afc1e881b3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'base sinistro'.dt_ocorrencia_sinistro
+	toColumn: LocalDateTable_1d6e3b2f-a23a-4e32-b263-bb30fca9515c.Date
+
+relationship 6333a11d-0a88-484c-acd5-d7f6c2ef898a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Python_sinistPolicial_Merge.Data
+	toColumn: LocalDateTable_8896c010-055e-484a-b5fa-4da8220c252c.Date
+

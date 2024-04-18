@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Ofertas x Demandas TOTVs"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "63e6d2f0-a646-4c4a-9566-60d3683210b2"
+  }
+}

@@ -1,0 +1,26 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["base sinistro","vendas seguros","MEDIDAS","Python_sinistPolicial_Merge","Python_sinistPolicial_Correlação"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.128.952.0 (24.04)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'base sinistro'
+ref table DateTableTemplate_64dfc595-70ed-4002-8aa3-337b3e2b5f5a
+ref table 'vendas seguros'
+ref table LocalDateTable_4a69e063-56f5-432d-91a4-cc04b0c77592
+ref table MEDIDAS
+ref table LocalDateTable_1d6e3b2f-a23a-4e32-b263-bb30fca9515c
+ref table Python_sinistPolicial_Merge
+ref table Python_sinistPolicial_Correlação
+ref table LocalDateTable_8896c010-055e-484a-b5fa-4da8220c252c
+

@@ -1,0 +1,101 @@
+table MEDIDAS
+	lineageTag: 96e41e1b-d778-4826-8ede-803a8b02cb28
+
+	measure M = CALCULATE(COUNT('vendas seguros'[Veiculo]),'vendas seguros'[sexo]="M")
+		formatString: 0
+		lineageTag: a1d5ac37-91a9-42f9-b703-a9dfc377b803
+
+	measure F = CALCULATE(COUNT('vendas seguros'[Veiculo]),'vendas seguros'[sexo]="F")
+		formatString: 0
+		lineageTag: 5fb4a351-b291-45d6-8e43-89a78ff9d04b
+
+	measure 'não informado' = CALCULATE(COUNT('vendas seguros'[Veiculo]),'vendas seguros'[sexo]="Não Informado")
+		formatString: 0
+		lineageTag: d4e1ce43-211c-458b-8a89-e3d5690411dc
+
+	measure 'Pessoa física' = CALCULATE(COUNT('vendas seguros'[Veiculo]),'vendas seguros'[tipo_pessoa]="PESSOA FISICA")
+		formatString: #,0
+		lineageTag: 3553511e-2697-4625-8cbb-cd5c1ba9b349
+
+	measure Casado = CALCULATE(COUNT('vendas seguros'[Veiculo]),'vendas seguros'[estado_civil]="CASADO")
+		formatString: 0
+		lineageTag: 2aefc513-a94e-4355-99c9-c083cd0d5c98
+
+	measure Solteiro = CALCULATE(COUNT('vendas seguros'[Veiculo]),'vendas seguros'[estado_civil]="SOLTEIRO")
+		formatString: 0
+		lineageTag: a3d9b20e-37a4-404c-be99-f076e1409b0e
+
+	measure Outros = CALCULATE(COUNT('vendas seguros'[Veiculo]),'vendas seguros'[estado_civil]="OUTROS")
+		formatString: 0
+		lineageTag: 3793e576-6400-4cf2-9037-ac43ab2b918d
+
+	measure Divorciado = CALCULATE(COUNT('vendas seguros'[Veiculo]),'vendas seguros'[estado_civil]="DIVORCIADO")
+		formatString: 0
+		lineageTag: e56768be-5d67-46cd-a08c-db171d797419
+
+	measure Viuvo = CALCULATE(COUNT('vendas seguros'[Veiculo]),'vendas seguros'[estado_civil]="VIUVO")
+		formatString: 0
+		lineageTag: 40d24559-9dc6-4870-aa27-5f5a97ed703b
+
+	measure 'Pessoa juridica' = CALCULATE(COUNT('vendas seguros'[Veiculo]),'vendas seguros'[tipo_pessoa]="PESSOA JURIDICA")
+		formatString: #,0
+		lineageTag: 99695858-b214-4840-931c-0ca6a8a0d7d7
+
+	measure 'Total Veiculo sinistro' = CALCULATE(COUNT('base sinistro'[Veiculo]))
+		formatString: #,0
+		lineageTag: bf915e17-dc68-421d-bfaf-c56ec3d91654
+
+	measure 'perda parcial 1' = CALCULATE(COUNT('base sinistro'[Veiculo]),'base sinistro'[sin_perda_parcial]=1)
+		formatString: 0
+		lineageTag: 37605702-73f2-4fc9-b084-b4c1910bff57
+
+	measure 'perda parcial 2' = CALCULATE(COUNT('base sinistro'[Veiculo]),'base sinistro'[sin_perda_parcial]=2)
+		formatString: 0
+		lineageTag: 53bd70fb-6d9f-427a-bd8c-2f4daf8ac760
+
+	measure 'perda parcial 3' = CALCULATE(COUNT('base sinistro'[Veiculo]),'base sinistro'[sin_perda_parcial]=3)
+		formatString: 0
+		lineageTag: a26a1734-4abd-4962-ab4c-b67abd14f78e
+
+	measure 'perda parcial' = CALCULATE(COUNT('base sinistro'[sin_perda_parcial]),'base sinistro'[sin_perda_parcial]>0)
+		formatString: #,0
+		lineageTag: cdbc7af4-7632-4460-b07d-a2f4e6ff833a
+
+	measure 'perda total' = CALCULATE(COUNT('base sinistro'[sin_perda_total]),'base sinistro'[sin_perda_total]>0)
+		formatString: #,0
+		lineageTag: d6161c04-cd9a-4943-975f-6894576da031
+
+	measure roubo = CALCULATE(COUNT('base sinistro'[sin_roubo]),'base sinistro'[sin_roubo]>0)
+		formatString: #,0
+		lineageTag: d348475f-a263-4fe5-81b5-6ed070c57b20
+
+	measure '% parcial' = [perda parcial]/[Total Veiculo sinistro]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 470431eb-ebd4-492f-a9cd-1d34fe59d485
+
+	measure 'perda parcial média' = CALCULATE(AVERAGEX('base sinistro','base sinistro'[sin_perda_parcial]),'base sinistro'[sin_perda_parcial]>0)
+		formatString: 0
+		lineageTag: f2b794b1-34c9-48a6-b83a-795f1b9e871e
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '% total' = [perda total]/[Total Veiculo sinistro]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 875521ff-e03a-4916-a86a-df9150ac39de
+
+	measure '% roubo' = [roubo]/[Total Veiculo sinistro]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: a89ef825-179a-4c22-bab4-c34bcb30cad0
+
+	partition MEDIDAS-b666829b-85ec-41bd-97c3-bf298e7ff694 = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

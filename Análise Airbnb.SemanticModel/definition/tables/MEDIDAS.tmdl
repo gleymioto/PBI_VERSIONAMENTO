@@ -1,0 +1,119 @@
+table MEDIDAS
+	lineageTag: 733f1f83-499e-46cb-9fc8-653f1e0e3d29
+
+	measure 'Acomodações únicas' = DISTINCTCOUNT(f_listings[listing_id])
+		formatString: #,0
+		lineageTag: 88d885de-68ba-4162-9599-468848c96362
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '% top10' = 31000/[Acomodações únicas]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: a1471009-50eb-471c-8e5f-d25ca26980fc
+
+		changedProperty = FormatString
+
+	measure 'Total Turistas' = Calculate([Acomodações únicas],Filter(f_listings,f_listings[Cluster Turista/Residente]="Turista"))
+		formatString: 0
+		lineageTag: 1f9719cf-39e4-444d-a4bc-39c85f0558d9
+
+	measure 'Total Residentes Longa duração' = Calculate([Acomodações únicas],Filter(f_listings,f_listings[Cluster Turista/Residente]="Residente/Longa Duração"))
+		formatString: 0
+		lineageTag: dae920b1-27ce-43d0-86b2-a809872b421c
+
+	measure 'Total Host' = DISTINCTCOUNT(f_listings[host_id])
+		formatString: #,0
+		lineageTag: a34fecb5-04ed-41bc-8794-a8a6320daefd
+
+		changedProperty = FormatString
+
+	measure 'Superhost true' = Calculate([Total Host],Filter(f_listings,f_listings[host_is_superhost]="t"))
+		formatString: 0
+		lineageTag: 6c92f97a-bf64-496e-9e23-750d440255bd
+
+	measure 'superhost false' = Calculate([Total Host],Filter(f_listings,f_listings[host_is_superhost]="f"))
+		formatString: 0
+		lineageTag: b25dbd11-e6f3-46ed-90fa-e830162226c7
+
+	measure 'superhost em branco' = Calculate([Total Host],Filter(f_listings,f_listings[host_is_superhost]=" "))
+		formatString: 0
+		lineageTag: 98b854b8-9306-43c5-8dfd-29e6982a26af
+
+	measure 'não é superhost' = [superhost false]+[superhost em branco]
+		formatString: 0
+		lineageTag: 5e47e534-5255-42e3-8c14-9eadfa0662f3
+
+	measure '% não é SH' = [não é superhost]/[Total Host]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: cdab5af2-3d88-41ce-9708-bf7e45fe18b8
+
+		changedProperty = FormatString
+
+	measure '% superhost' = [Superhost true]/[Total Host]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: aa0be3e3-15f2-40e7-a118-d031cb944e8c
+
+		changedProperty = FormatString
+
+	measure 'Total preço acomodações' = SUM(f_listings[Preço (dólar)])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 29bd3644-ad3a-4177-b836-d3892644c7d1
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure distinctSETEMBRO = CALCULATE(DISTINCTCOUNT(f_listings[listing_id]),f_listings[Data]="01/09/2022")
+		formatString: 0
+		lineageTag: f37da7fd-edbe-4c34-b9a8-5b4a1575f48c
+
+	measure distinctDEZ = CALCULATE(DISTINCTCOUNT(f_listings[listing_id]),f_listings[Data]="01/12/2022")
+		formatString: 0
+		lineageTag: 032d482a-9c5e-48d9-9d3e-48e24d0df8c9
+
+	measure 'preço mínimo' = MIN(f_listings[Preço (dólar)])
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 3e8985f6-6e80-4f9c-b707-5bc2fe3647d4
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'média preço' = AVERAGEX(Values(f_listings),[Preço (dólar)])
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: c6ba3672-fd46-452e-a1ca-77485235b297
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'preço máximo' = MAX(f_listings[Preço (dólar)])
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: c2a70580-3340-405e-b9b9-4e97e744e2ed
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'preço mediano' = MEDIAN(f_listings[Preço (dólar)])
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 04919a61-22ef-4de2-a256-9c215706001f
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	partition MEDIDAS-15ddeb9e-bd99-4c26-89a5-6b65b547cc70 = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,349 @@
+table LED_juntos
+	lineageTag: da0b772d-438f-48fd-94cf-1a1788b2a721
+
+	measure CompareceramCOMVoucher =
+			CALCULATE(
+			    COUNTROWS(LED_juntos),
+			    LED_juntos[cortesia]=1
+			    )
+		formatString: 0
+		lineageTag: ea2a2834-aa08-4497-ab63-0af8ef84e241
+
+	measure 'CompareceramCOMVoucher dividido por Contagem de Cliente' =
+			
+			DIVIDE([CompareceramCOMVoucher], COUNTA('LED_juntos'[Cliente]))
+		formatString: 0%;-0%;0%
+		lineageTag: 94c91111-b686-4133-9f76-dd5cee456412
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	measure CompareceramSEMvoucher =
+			CALCULATE(
+			    COUNTROWS(LED_juntos),
+			    LED_juntos[cortesia]=0
+			)
+		formatString: 0
+		lineageTag: 44e7c0cc-82e7-4b45-a811-41e7eb31d9a3
+
+	measure 'CompareceramSEMVoucher dividido por Contagem de Cliente' =
+			
+			DIVIDE([CompareceramSEMvoucher], COUNTA('LED_juntos'[Cliente]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 185b2772-d46b-45d5-98dc-3b1ff22db940
+
+		changedProperty = FormatString
+
+	measure CompraramCOMVoucher = ```
+			CALCULATE(
+			    COUNTROWS(LED_juntos),
+			    LED_juntos[cortesia]=1,
+			    LED_juntos[Total]>=1
+			        
+			)
+			```
+		formatString: 0
+		lineageTag: 578792ff-17db-4b70-ac0a-f760842b4dd3
+
+	measure 'CompraramCOMVoucher dividido por Contagem de Cliente' =
+			
+			DIVIDE([CompraramCOMVoucher], COUNTA('LED_juntos'[Cliente]))
+		formatString: 0%;-0%;0%
+		lineageTag: a7f513a7-4c10-4118-9f86-623a069041f2
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	measure CompraramSEMvoucher =
+			CALCULATE(
+			    COUNTROWS(LED_juntos),
+			    LED_juntos[cortesia]=0,
+			    LED_juntos[Total]>=1
+			)
+		formatString: 0
+		lineageTag: 4a432db8-92e5-4572-991f-0f053ef97865
+
+	measure 'CompraramSEMvoucher dividido por Contagem de Cliente' =
+			
+			DIVIDE([CompraramSEMvoucher], COUNTA('LED_juntos'[Cliente]))
+		formatString: 0%;-0%;0%
+		lineageTag: e8d1db13-0408-441f-8531-43e4a18a1705
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	measure 'Total de Vendas' =
+			CALCULATE(
+			    COUNTROWS(LED_juntos),
+			    LED_juntos[Total]>0
+			)
+		formatString: 0
+		lineageTag: d7cdfdc7-dc3a-4dff-b440-4369179ad3fc
+
+	measure 'CompraramCOMVoucher dividido por CompareceramCOMVoucher' =
+			
+			DIVIDE([CompraramCOMVoucher], [CompareceramCOMVoucher])
+		formatString: 0%;-0%;0%
+		lineageTag: 6198a6cd-1b90-4d41-99cc-8c9172a7c29a
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	measure 'CompraramSEMvoucher dividido por CompareceramSEMvoucher' =
+			
+			DIVIDE([CompraramSEMvoucher], [CompareceramSEMvoucher])
+		formatString: 0%;-0%;0%
+		lineageTag: 70b72076-6b92-45cf-96d3-bd7b22863c74
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	measure 'Total de Vendas dividido por CompraramCOMVoucher' =
+			
+			DIVIDE([CompraramCOMVoucher], [Total de Vendas])
+		formatString: 0%;-0%;0%
+		lineageTag: c3493c7a-239b-469d-b4b9-bf03d852d78b
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	measure 'Total de Vendas dividido por CompraramSEMvoucher' =
+			
+			DIVIDE([CompraramSEMvoucher], [Total de Vendas])
+		formatString: 0%;-0%;0%
+		lineageTag: f4c2efd2-e2c0-4ee3-8c01-792c7ed4996c
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	measure 'Total de Vendas dividido por Contagem de Cliente' =
+			
+			DIVIDE([Total de Vendas], COUNTA('LED_juntos'[Cliente]))
+		formatString: 0%;-0%;0%
+		lineageTag: 823ae25b-5b5d-4e22-a5b4-b9913bd98b0b
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	measure 'COMPRASSEMvoucher dividido por COMPRASSEMvoucher' =
+			
+			DIVIDE([CompareceramSEMvoucher], [CompraramSEMvoucher])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ee5d4a36-63c4-4bdc-8bc0-08f0b8096a35
+
+		changedProperty = FormatString
+
+	measure 'Total de Vendas dividido por CompareceramSEMvoucher' =
+			
+			DIVIDE([Total de Vendas], [CompareceramSEMvoucher])
+		formatString: 0%;-0%;0%
+		lineageTag: 9a375145-6102-42ea-9e12-25b0fbbb8e36
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	measure 'CompareceramSEMvoucher dividido por Total de Vendas' =
+			
+			DIVIDE([CompareceramSEMvoucher], [Total de Vendas])
+		formatString: 0%;-0%;0%
+		lineageTag: 75343810-4e88-4eba-a47d-2ef7c42011ae
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	measure 'CompraramSEMvoucher dividido por CompareceramSEMvoucher 2' =
+			
+			DIVIDE([CompraramSEMvoucher], [CompareceramSEMvoucher])
+		formatString: 0%;-0%;0%
+		lineageTag: 2e3f0eaf-4dbf-46eb-bd1a-33c6014a067e
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+	column 1
+		dataType: int64
+		formatString: 0
+		lineageTag: 799d5e84-b905-4faa-81b5-d25af50932df
+		summarizeBy: sum
+		sourceColumn: 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente
+		dataType: string
+		lineageTag: e3f4b9d1-9d61-495d-b8e6-fbcbefe73373
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Franquia
+		dataType: string
+		lineageTag: ad686ae0-3331-4da8-9b5f-c18ce343c29e
+		summarizeBy: none
+		sourceColumn: Franquia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Profissional
+		dataType: string
+		lineageTag: 0b21d341-a109-44e0-b05d-c91c4edaade1
+		summarizeBy: none
+		sourceColumn: Profissional
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Comanda'
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 3679949d-81a2-4724-b61e-c9832fed588a
+		summarizeBy: none
+		sourceColumn: Data Comanda
+
+		variation Variation
+			isDefault
+			relationship: 8049ccef-ca07-488c-9085-2fc9a797853f
+			defaultHierarchy: LocalDateTable_b00c8f60-6224-469a-a7ad-281021d015dc.'Hierarquia de datas'
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column mês
+		dataType: string
+		lineageTag: 79cf5a51-233a-4fb6-a5ba-12ea6bbe92b5
+		summarizeBy: none
+		sourceColumn: mês
+		sortByColumn: 'Data Comanda'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Número Comanda'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9dc730f4-b057-49cc-9c33-c5d8d80c6a83
+		summarizeBy: sum
+		sourceColumn: Número Comanda
+
+		annotation SummarizationSetBy = Automatic
+
+	column Serviço
+		dataType: string
+		lineageTag: c7de8b59-7e2f-4377-9e93-bb5f05614828
+		summarizeBy: none
+		sourceColumn: Serviço
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 44b048f7-09e3-49b2-9d43-3e751c8c26e3
+		summarizeBy: sum
+		sourceColumn: Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column 'busca base'
+		dataType: string
+		lineageTag: 897bb2d0-1458-41d4-994b-61de4d0a5174
+		summarizeBy: none
+		sourceColumn: busca base
+
+		annotation SummarizationSetBy = Automatic
+
+	column obs
+		dataType: string
+		lineageTag: 2dd2a434-2467-4f09-b317-577e66da9648
+		summarizeBy: none
+		sourceColumn: obs
+
+		annotation SummarizationSetBy = Automatic
+
+	column cortesia
+		dataType: int64
+		formatString: 0
+		lineageTag: 45f51dd4-9859-4300-8714-52f502545580
+		summarizeBy: sum
+		sourceColumn: cortesia
+
+		annotation SummarizationSetBy = Automatic
+
+	partition LED_juntos-e2c01a00-837d-4a9f-a2d5-e8584e846b60 = m
+		mode: import
+		source =
+				let
+				    Fonte = Web.BrowserContents("https://docs.google.com/spreadsheets/d/e/2PACX-1vSLaKg7G9SjfYGXwhUn3uFL8Hsy-nG_0jMCB4X9pSXLQSsoblvJqlDMd0mLBfYr-isjl0y-R0c2Ao3_/pubhtml"),
+				    #"Tabela extraída de HTML" = Html.Table(Fonte, {{"Column1", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(1)"}, {"Column2", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(2)"}, {"Column3", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(3)"}, {"Column4", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(4)"}, {"Column5", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(5)"}, {"Column6", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(6)"}, {"Column7", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(7)"}, {"Column8", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(8)"}, {"Column9", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(9)"}, {"Column10", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(10)"}, {"Column11", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(11)"}, {"Column12", "DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(12)"}}, [RowSelector="DIV[id='525533217'] > DIV.ritz.grid-container > TABLE.waffle > * > TR"]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Tabela extraída de HTML",{{"Column1", Int64.Type}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type text}, {"Column11", type text}, {"Column12", type text}}),
+				    #"Linhas Principais Removidas" = Table.Skip(#"Tipo Alterado",1),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Linhas Principais Removidas", [PromoteAllScalars=true]),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"1", Int64.Type}, {"Cliente", type text}, {"Franquia", type text}, {"Profissional", type text}, {"Data Comanda", type date}, {"mês", type text}, {"Número Comanda", Int64.Type}, {"Serviço", type text}, {"Total", Currency.Type}, {"busca base", type text}, {"obs", type text}, {"cortesia", Int64.Type}})
+				in
+				    #"Tipo Alterado1"
+
+	annotation PBI_ResultType = Table
+

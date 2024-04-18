@@ -1,0 +1,36 @@
+relationship 6b41eb0f-1bb3-44b9-80f8-f187928f56d2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dcalend.Date
+	toColumn: LocalDateTable_cd4b1b77-2d29-4001-a1f0-12d31f2cdb62.Date
+
+relationship 162acb5a-8bd6-4087-af11-90fc130f3ad7
+	fromColumn: 'novos mercados'.Date
+	toColumn: Dcalend.Date
+
+relationship 6e8f6fe9-6e66-46d6-ae44-75f1bf74f74f
+	fromColumn: mediano.Date
+	toColumn: Dcalend.Date
+
+relationship 6d5dc1a0-d638-45b0-8e29-3703f3e8553a
+	fromColumn: 'apreciador senior'.Data
+	toColumn: Dcalend.Date
+
+relationship 4cd998dc-d55c-4b89-89e1-0c350d277354
+	fromColumn: 'base completa'.Dt_Customer
+	toColumn: Dcalend.Date
+
+relationship ca9f54f0-587f-4557-af1a-d5e43c0f0186
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'apreciador senior'.mes/ano
+	toColumn: LocalDateTable_07a02596-a800-46b4-b993-b9922d9f96a6.Date
+
+relationship db53d590-ef56-405a-ad8b-828bba9f33d2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: mediano.mês/ano
+	toColumn: LocalDateTable_0ffb624c-20c5-4744-a3c7-32253ed99220.Date
+
+relationship 4be0d0b2-c825-4862-ac1c-c971fbfaa059
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'novos mercados'.mes/ano
+	toColumn: LocalDateTable_4bce8a33-ef7c-4385-95b3-64b1ebf02d56.Date
+

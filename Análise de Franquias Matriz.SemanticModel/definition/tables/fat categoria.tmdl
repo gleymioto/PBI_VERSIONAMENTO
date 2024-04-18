@@ -1,0 +1,65 @@
+table 'fat categoria'
+	lineageTag: afb6e208-7734-483e-9ec6-47b987799aa3
+
+	measure 'Medida 2'
+		lineageTag: 4e1d6672-210a-427e-9d7e-5872f3443502
+
+	column 1
+		dataType: int64
+		formatString: 0
+		lineageTag: 86bf2705-e6a1-4b52-8aaf-677be53af2ac
+		summarizeBy: sum
+		sourceColumn: 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Franquia
+		dataType: string
+		lineageTag: 4c1e661f-4af4-4bfe-877e-07e67c9351ac
+		summarizeBy: none
+		sourceColumn: Franquia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		dataType: string
+		lineageTag: 859e1855-4de6-4d0d-aa72-d9ec0292cddf
+		summarizeBy: none
+		sourceColumn: Mês
+
+		annotation SummarizationSetBy = Automatic
+
+	column procedimento
+		dataType: string
+		lineageTag: c39a66ae-499b-4e42-b4dd-67bbac00e8a2
+		summarizeBy: none
+		sourceColumn: procedimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valor
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 5a9f4ace-b80a-4d8a-bda4-b62a7e67c2e0
+		summarizeBy: sum
+		sourceColumn: Valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	partition 'fat categoria-3581a840-4ba5-4d1f-8569-b2aa6a114ef7' = m
+		mode: import
+		source =
+				let
+				    Fonte = Web.BrowserContents("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ48atdDXhsUk5mWb9iacd1mFxJvJC70aKuvSaVjtH7Xd-9lo_KyGz-MlaV3V14dTWGLNaL0Tx-shtg/pubhtml"),
+				    #"Tabela extraída de HTML" = Html.Table(Fonte, {{"Column1", "DIV[id='1294045598'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(1)"}, {"Column2", "DIV[id='1294045598'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(2)"}, {"Column3", "DIV[id='1294045598'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(3)"}, {"Column4", "DIV[id='1294045598'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(4)"}, {"Column5", "DIV[id='1294045598'] > DIV.ritz.grid-container > TABLE.waffle > * > TR > :nth-child(5)"}}, [RowSelector="DIV[id='1294045598'] > DIV.ritz.grid-container > TABLE.waffle > * > TR"]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Tabela extraída de HTML",{{"Column1", Int64.Type}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}}),
+				    #"Linhas Principais Removidas" = Table.Skip(#"Tipo Alterado",1),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Linhas Principais Removidas", [PromoteAllScalars=true]),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"1", Int64.Type}, {"Franquia", type text}, {"Mês", type text}, {"procedimento", type text}, {"Valor", Currency.Type}})
+				in
+				    #"Tipo Alterado1"
+
+	annotation PBI_ResultType = Table
+

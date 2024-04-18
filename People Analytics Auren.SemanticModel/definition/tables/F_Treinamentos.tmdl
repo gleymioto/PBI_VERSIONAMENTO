@@ -1,0 +1,154 @@
+table F_Treinamentos
+	lineageTag: 1e2662ce-98a9-4cc0-9ddc-dbc58a0ab7a3
+
+	column 'Código de Fornecedor SAP'
+		dataType: string
+		lineageTag: 25fa1bcb-12d9-4cde-b1f7-aadb4973275c
+		summarizeBy: none
+		sourceColumn: Código de Fornecedor SAP
+
+		annotation SummarizationSetBy = Automatic
+
+	column Curso
+		dataType: string
+		lineageTag: 722efd32-cf3f-4fc4-a6e5-8d0da0c91c04
+		summarizeBy: none
+		sourceColumn: Curso
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Fim'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 216e26b0-6458-4086-bce1-10d4313f651d
+		summarizeBy: none
+		sourceColumn: Data Fim
+
+		variation Variation
+			isDefault
+			relationship: bd74a195-f424-45cc-b539-139fa5a17f06
+			defaultHierarchy: LocalDateTable_18b15f62-964d-4a6c-8478-b7be5c164475.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ID_Matrículas
+		dataType: string
+		lineageTag: dbdebfd8-6a34-46c5-bb4e-94f4e6493163
+		summarizeBy: none
+		sourceColumn: ID_Matrículas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Início/Treinamento'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: fad7fcba-d7c4-470c-8d8a-1364f44e17c9
+		summarizeBy: none
+		sourceColumn: Data Início/Treinamento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Carga horária'
+		dataType: string
+		lineageTag: 22221a63-1213-465f-a303-c2bf57306528
+		summarizeBy: none
+		sourceColumn: Carga horária
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo de Programa'
+		dataType: string
+		lineageTag: 14422593-3acc-42c1-b6d1-af1e14998f63
+		summarizeBy: none
+		sourceColumn: Tipo de Programa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tema do Treinamento'
+		dataType: string
+		lineageTag: bd89cf3f-cd01-41a2-93ed-e96c930a5765
+		summarizeBy: none
+		sourceColumn: Tema do Treinamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 91da2bc6-7413-4e35-81eb-6ffd7131de23
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Área
+		dataType: string
+		lineageTag: 7251a7a4-ae9f-47e9-b6cc-1426452c88ce
+		summarizeBy: none
+		sourceColumn: Área
+
+		annotation SummarizationSetBy = Automatic
+
+	column Índice
+		dataType: int64
+		formatString: 0
+		lineageTag: 9aa7a967-bf13-4567-af5e-dd2d0e22ad9b
+		summarizeBy: sum
+		sourceColumn: Índice
+
+		annotation SummarizationSetBy = Automatic
+
+	partition F_Treinamentos = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\gleyd\OneDrive\Documentos\CASE AUREN\Base Benefício de Educação.xlsx"), null, true),
+				    #"Política Educação_Sheet" = Fonte{[Item="Política Educação",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Política Educação_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Matricula", Int64.Type}, {"DIRETORIA", type any}, {"Código de Fornecedor SAP", type any}, {"Curso", type text}, {"Tema do Treinamento", type text}, {"Data Início", type date}, {"Data Fim", type date}, {"Column8", type any}}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Tipo Alterado",null,"",Replacer.ReplaceValue,{"DIRETORIA"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído","error","",Replacer.ReplaceText,{"DIRETORIA"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","-","",Replacer.ReplaceText,{"DIRETORIA"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2",null,0,Replacer.ReplaceValue,{"Código de Fornecedor SAP"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Valor Substituído3",{{"Código de Fornecedor SAP", type text}}),
+				    #"Valor Substituído4" = Table.ReplaceValue(#"Tipo Alterado1","0","",Replacer.ReplaceText,{"Código de Fornecedor SAP"}),
+				    #"Erros Substituídos" = Table.ReplaceErrorValues(#"Valor Substituído4", {{"DIRETORIA", ""}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Erros Substituídos",{"Column8"}),
+				    #"Linhas Classificadas" = Table.Sort(#"Colunas Removidas",{{"Data Início", Order.Ascending}}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Linhas Classificadas", "Personalizar", each "Benefício Educação"),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Personalização Adicionada",{{"Personalizar", "Tipo de Programa"}}),
+				    #"Consulta Acrescentada" = Table.Combine({#"Colunas Renomeadas", F_Treinamentos_Essenciais}),
+				    #"Valor Substituído5" = Table.ReplaceValue(#"Consulta Acrescentada",null,"Treinamento Essenciais",Replacer.ReplaceValue,{"Tipo de Programa"}),
+				    #"Consulta Acrescentada1" = Table.Combine({#"Valor Substituído5", F_Treinamentos_Liderança}),
+				    #"Valor Substituído6" = Table.ReplaceValue(#"Consulta Acrescentada1",null,"Treinamento Liderança",Replacer.ReplaceValue,{"Tipo de Programa"}),
+				    #"Colunas Mescladas" = Table.CombineColumns(Table.TransformColumnTypes(#"Valor Substituído6", {{"Data Início", type text}, {"Dia treinamento", type text}}, "pt-BR"),{"Data Início", "Dia treinamento"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Data Início/Treinamento"),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Colunas Mescladas",{"Matricula", "DIRETORIA", "Código de Fornecedor SAP", "Curso", "Data Início/Treinamento", "Data Fim", "Carga horária", "Tema do Treinamento", "Tipo de Programa", "Matrícula", "Área", "Tema Treinamento", "Status", "VP/Diretoria N-1"}),
+				    #"Colunas Mescladas1" = Table.CombineColumns(#"Colunas Reordenadas",{"Tema do Treinamento", "Tema Treinamento"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Tema_Treinamento"),
+				    #"Colunas Mescladas2" = Table.CombineColumns(#"Colunas Mescladas1",{"DIRETORIA", "VP/Diretoria N-1"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Diretoria.1"),
+				    #"Colunas Renomeadas1" = Table.RenameColumns(#"Colunas Mescladas2",{{"Diretoria.1", "Diretoria"}}),
+				    #"Colunas Mescladas3" = Table.CombineColumns(Table.TransformColumnTypes(#"Colunas Renomeadas1", {{"Matricula", type text}, {"Matrícula", type text}}, "pt-BR"),{"Matricula", "Matrícula"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"ID_Matrículas"),
+				    #"Colunas Mescladas4" = Table.CombineColumns(#"Colunas Mescladas3",{"Área", "Diretoria"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Área.1"),
+				    #"Colunas Renomeadas2" = Table.RenameColumns(#"Colunas Mescladas4",{{"Área.1", "Área"}}),
+				    #"Colunas Reordenadas1" = Table.ReorderColumns(#"Colunas Renomeadas2",{"ID_Matrículas", "Código de Fornecedor SAP", "Curso", "Data Início/Treinamento", "Data Fim", "Carga horária", "Tipo de Programa", "Tema_Treinamento", "Status", "Área"}),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Colunas Reordenadas1",{{"Tipo de Programa", type text}, {"Data Início/Treinamento", type date}}),
+				    #"Colunas Renomeadas3" = Table.RenameColumns(#"Tipo Alterado2",{{"Tema_Treinamento", "Tema do Treinamento"}, {"ID_Matrículas", "ID_Matrículas"}}),
+				    #"Valor Substituído7" = Table.ReplaceValue(#"Colunas Renomeadas3",null,"Sem Status/FinalizadoDia",Replacer.ReplaceValue,{"Status"}),
+				    #"Valor Substituído8" = Table.ReplaceValue(#"Valor Substituído7",null,"Indeterminada",Replacer.ReplaceValue,{"Carga horária"}),
+				    #"Índice Adicionado" = Table.AddIndexColumn(#"Valor Substituído8", "Índice", 0, 1, Int64.Type),
+				    #"Colunas Reordenadas2" = Table.ReorderColumns(#"Índice Adicionado",{"Índice", "ID_Matrículas", "Código de Fornecedor SAP", "Curso", "Data Início/Treinamento", "Data Fim", "Carga horária", "Tipo de Programa", "Tema do Treinamento", "Status", "Área"}),
+				    #"Valor Substituído9" = Table.ReplaceValue(#"Colunas Reordenadas2","Sem Status/FinalizadoDia","Em Andamento",Replacer.ReplaceText,{"Status"}),
+				    #"Valor Substituído10" = Table.ReplaceValue(#"Valor Substituído9","Em Andamento","Em andamento",Replacer.ReplaceText,{"Status"}),
+				    #"Colunas Renomeadas4" = Table.RenameColumns(#"Valor Substituído10",{{"Tipo de Programa", "Tipo de Programa"}}),
+				    #"Valor Substituído11" = Table.ReplaceValue(#"Colunas Renomeadas4",null,"Não informado",Replacer.ReplaceValue,{"Área"}),
+				    #"Tipo Alterado3" = Table.TransformColumnTypes(#"Valor Substituído11",{{"Área", type text}}),
+				    #"Valor Substituído12" = Table.ReplaceValue(#"Tipo Alterado3","","Não Informado",Replacer.ReplaceValue,{"Área"})
+				in
+				    #"Valor Substituído12"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

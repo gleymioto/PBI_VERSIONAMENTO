@@ -1,0 +1,24 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["F_Treinamentos","F_Treinamentos_Essenciais","F_Treinamentos_Liderança","D_Calendario","MEDIDAS","D_Funcionários"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.128.952.0 (24.04)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_b009b9bf-e2b8-4390-bc4e-773b2b24e4aa
+ref table F_Treinamentos
+ref table D_Calendario
+ref table LocalDateTable_839ec521-8689-4c5d-8e76-b05e62896f68
+ref table LocalDateTable_18b15f62-964d-4a6c-8478-b7be5c164475
+ref table MEDIDAS
+ref table D_Funcionários
+

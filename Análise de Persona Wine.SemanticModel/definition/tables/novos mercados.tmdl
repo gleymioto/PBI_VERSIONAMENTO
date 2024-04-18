@@ -1,0 +1,439 @@
+table 'novos mercados'
+	lineageTag: ae0be215-1af9-4bef-b5f4-20d82b6ee68c
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 01dada41-1136-4dad-994e-503afad59a05
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year_Birth
+		dataType: int64
+		formatString: 0
+		lineageTag: 643a2448-65ce-40d4-bfb2-04a5979675eb
+		summarizeBy: sum
+		sourceColumn: Year_Birth
+
+		annotation SummarizationSetBy = Automatic
+
+	column Education
+		dataType: string
+		lineageTag: 7e282b25-1f44-4ecf-88ff-690fdd748d7d
+		summarizeBy: none
+		sourceColumn: Education
+
+		annotation SummarizationSetBy = Automatic
+
+	column Marital_Status
+		dataType: string
+		lineageTag: c1ee0b38-2f4a-49e6-8691-09b744cb3182
+		summarizeBy: none
+		sourceColumn: Marital_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Income
+		dataType: int64
+		formatString: 0
+		lineageTag: 87e3f6f9-d284-4503-8124-4bab15277288
+		summarizeBy: sum
+		sourceColumn: Income
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kidhome
+		dataType: int64
+		formatString: 0
+		lineageTag: 3567951d-ce5c-45d0-9886-bcdf80a480c1
+		summarizeBy: sum
+		sourceColumn: Kidhome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Teenhome
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b046425-7fcb-430c-85cf-6af8abcae183
+		summarizeBy: sum
+		sourceColumn: Teenhome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 855d551a-331b-43e9-a4fe-a7474203f4f3
+		summarizeBy: none
+		sourceColumn: Date
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Recency
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f74cb89-639b-472f-8d4b-6fd1bebba3d7
+		summarizeBy: sum
+		sourceColumn: Recency
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntWines
+		dataType: int64
+		formatString: 0
+		lineageTag: 34b7d7a0-97d4-447b-85a0-823d03284281
+		summarizeBy: sum
+		sourceColumn: MntWines
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntFruits
+		dataType: int64
+		formatString: 0
+		lineageTag: f8f6df03-083f-44e5-9a0e-cf40ab28e97e
+		summarizeBy: sum
+		sourceColumn: MntFruits
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntMeatProducts
+		dataType: int64
+		formatString: 0
+		lineageTag: e1d2576a-7aac-4f6f-b37b-ea84887a4c77
+		summarizeBy: sum
+		sourceColumn: MntMeatProducts
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntFishProducts
+		dataType: int64
+		formatString: 0
+		lineageTag: edcbe086-8541-4583-84ee-0d8148e3cde6
+		summarizeBy: sum
+		sourceColumn: MntFishProducts
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntSweetProducts
+		dataType: int64
+		formatString: 0
+		lineageTag: 54ac1823-a045-4e65-b6bd-6ad30f1d2a56
+		summarizeBy: sum
+		sourceColumn: MntSweetProducts
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntGoldProds
+		dataType: int64
+		formatString: 0
+		lineageTag: 27ea849f-80a1-49d1-a69b-fef14108a8a1
+		summarizeBy: sum
+		sourceColumn: MntGoldProds
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumDealsPurchases
+		dataType: int64
+		formatString: 0
+		lineageTag: 4269d1c6-4493-45b0-88ad-a23b7bde7113
+		summarizeBy: sum
+		sourceColumn: NumDealsPurchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumWebPurchases
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b72f3e5-fa67-47a8-99a8-b28a9ffc958a
+		summarizeBy: sum
+		sourceColumn: NumWebPurchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumCatalogPurchases
+		dataType: int64
+		formatString: 0
+		lineageTag: 82bcd5e0-53b4-4173-bffd-f2895f33e50f
+		summarizeBy: sum
+		sourceColumn: NumCatalogPurchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumStorePurchases
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e1affba-d51e-422e-8446-cde0cfd6d42b
+		summarizeBy: sum
+		sourceColumn: NumStorePurchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumWebVisitsMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: f127136c-6fb4-4660-95eb-a0cf11f7f7da
+		summarizeBy: sum
+		sourceColumn: NumWebVisitsMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptedCmp3
+		dataType: int64
+		formatString: 0
+		lineageTag: aec584df-195c-49f9-90e9-d0fc45b614a1
+		summarizeBy: sum
+		sourceColumn: AcceptedCmp3
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptedCmp4
+		dataType: int64
+		formatString: 0
+		lineageTag: af2053f4-5975-4fda-b485-f94e5bf873a4
+		summarizeBy: sum
+		sourceColumn: AcceptedCmp4
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptedCmp5
+		dataType: int64
+		formatString: 0
+		lineageTag: 8066e33c-aadf-41e5-b565-f3f9995b195f
+		summarizeBy: sum
+		sourceColumn: AcceptedCmp5
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptedCmp1
+		dataType: int64
+		formatString: 0
+		lineageTag: ffc1a82b-aff7-4f01-8990-ef168559faa2
+		summarizeBy: sum
+		sourceColumn: AcceptedCmp1
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptedCmp2
+		dataType: int64
+		formatString: 0
+		lineageTag: 939efd85-8b70-4c37-8925-a09571aeb1af
+		summarizeBy: sum
+		sourceColumn: AcceptedCmp2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Complain
+		dataType: int64
+		formatString: 0
+		lineageTag: c8954fa3-c8d5-4ff3-8f8b-7886509fc654
+		summarizeBy: sum
+		sourceColumn: Complain
+
+		annotation SummarizationSetBy = Automatic
+
+	column Z_CostContact
+		dataType: int64
+		formatString: 0
+		lineageTag: ef2b2da6-dbee-4bdb-94ca-01eab1012762
+		summarizeBy: sum
+		sourceColumn: Z_CostContact
+
+		annotation SummarizationSetBy = Automatic
+
+	column Z_Revenue
+		dataType: int64
+		formatString: 0
+		lineageTag: c76b8fbe-e1b3-4261-8c22-9e651736fa65
+		summarizeBy: sum
+		sourceColumn: Z_Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column Response
+		dataType: int64
+		formatString: 0
+		lineageTag: a9637e24-cee7-431e-9a1d-aa7c51ddef37
+		summarizeBy: sum
+		sourceColumn: Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_RENDA
+		dataType: string
+		lineageTag: 536fd05d-9533-4f55-a144-276b2def3a00
+		summarizeBy: none
+		sourceColumn: FX_RENDA
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_GASTO_VINHO_2ANOS
+		dataType: string
+		lineageTag: b2b91371-3cc1-4b82-b550-f118b6d7467c
+		summarizeBy: none
+		sourceColumn: FX_GASTO_VINHO_2ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_GASTO_FRUTAS_2ANOS
+		dataType: string
+		lineageTag: c87997b6-759c-4e8b-a1da-de854ef51f30
+		summarizeBy: none
+		sourceColumn: FX_GASTO_FRUTAS_2ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_GASTO_CARNE_2ANOS
+		dataType: string
+		lineageTag: 6781655b-4589-4c55-8a3a-ec7ed6b74ced
+		summarizeBy: none
+		sourceColumn: FX_GASTO_CARNE_2ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_GASTO_PESCADO_2ANOS
+		dataType: string
+		lineageTag: e8b95242-a5e3-4b02-a88e-de90ab0e8800
+		summarizeBy: none
+		sourceColumn: FX_GASTO_PESCADO_2ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_GASTO_DOCES_2ANOS
+		dataType: string
+		lineageTag: 0ef5d72d-d7c4-484c-8c0b-6c65311f38bd
+		summarizeBy: none
+		sourceColumn: FX_GASTO_DOCES_2ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_GASTO_PROD_GOLD_2ANOS
+		dataType: string
+		lineageTag: c2c2d5ff-d3c6-4050-a2a1-88b864990095
+		summarizeBy: none
+		sourceColumn: FX_GASTO_PROD_GOLD_2ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_FREQ_ULTM_COMPRA
+		dataType: string
+		lineageTag: e0825cf6-fbca-452c-87b2-acf08bf82964
+		summarizeBy: none
+		sourceColumn: FX_FREQ_ULTM_COMPRA
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_COMPRAS_WEB
+		dataType: string
+		lineageTag: c38a0b4b-3c4a-4572-94b3-a5e6a5922095
+		summarizeBy: none
+		sourceColumn: FX_COMPRAS_WEB
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_COMPRAS_USANDO_CATALOGO
+		dataType: string
+		lineageTag: 85057e8e-a8fb-478c-99ba-823b9a50c331
+		summarizeBy: none
+		sourceColumn: FX_COMPRAS_USANDO_CATALOGO
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_COMPRAS_COM_DESCONTO
+		dataType: string
+		lineageTag: 7d22d9dd-6829-42b3-9bbe-26335fa9e7de
+		summarizeBy: none
+		sourceColumn: FX_COMPRAS_COM_DESCONTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_COMPRAS_NA_LOJA
+		dataType: string
+		lineageTag: 8aee31de-f43c-4cf1-a1a3-ee4fa99db387
+		summarizeBy: none
+		sourceColumn: FX_COMPRAS_NA_LOJA
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_VISITAS_WEB_ULT_MES
+		dataType: string
+		lineageTag: d224a1fa-c195-495b-9e2f-33d203f459cb
+		summarizeBy: none
+		sourceColumn: FX_VISITAS_WEB_ULT_MES
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDADE
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b1569ba-c0ee-47e2-8d6f-6470f561059e
+		summarizeBy: sum
+		sourceColumn: IDADE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_IDADE
+		dataType: string
+		lineageTag: cf6dafb4-d591-43aa-bc0d-b24c8b23e9b8
+		summarizeBy: none
+		sourceColumn: FX_IDADE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_CLIENTE_DESDE
+		dataType: string
+		lineageTag: 5fbbfe70-5e0a-44d0-b89a-48054a26f9cc
+		summarizeBy: none
+		sourceColumn: FX_CLIENTE_DESDE
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes/ano
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 07f296bf-6c8f-48f7-972a-a95bf2771d96
+		summarizeBy: none
+		sourceColumn: mes/ano
+
+		variation Variation
+			isDefault
+			relationship: 4be0d0b2-c825-4862-ac1c-c971fbfaa059
+			defaultHierarchy: LocalDateTable_4bce8a33-ef7c-4385-95b3-64b1ebf02d56.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: f5872261-6721-43fb-ad19-3e4082c8ee5e
+		summarizeBy: sum
+		sourceColumn: Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'novos mercados-32f06427-b38a-469d-af50-deaf8b29089f' = m
+		mode: import
+		source =
+				let
+				    Fonte = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1imlA5JE8H14laB5XtragqycQ4Q89O8yq56cOp7EzsKA/edit#gid=0"),
+				    #"novos mercados_Table" = Fonte{[name="novos mercados",ItemKind="Table"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"novos mercados_Table", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID", Int64.Type}, {"Year_Birth", Int64.Type}, {"Education", type text}, {"Marital_Status", type text}, {"Income", Int64.Type}, {"Kidhome", Int64.Type}, {"Teenhome", Int64.Type}, {"Dt_Customer", type date}, {"Recency", Int64.Type}, {"MntWines", Int64.Type}, {"MntFruits", Int64.Type}, {"MntMeatProducts", Int64.Type}, {"MntFishProducts", Int64.Type}, {"MntSweetProducts", Int64.Type}, {"MntGoldProds", Int64.Type}, {"NumDealsPurchases", Int64.Type}, {"NumWebPurchases", Int64.Type}, {"NumCatalogPurchases", Int64.Type}, {"NumStorePurchases", Int64.Type}, {"NumWebVisitsMonth", Int64.Type}, {"AcceptedCmp3", Int64.Type}, {"AcceptedCmp4", Int64.Type}, {"AcceptedCmp5", Int64.Type}, {"AcceptedCmp1", Int64.Type}, {"AcceptedCmp2", Int64.Type}, {"Complain", Int64.Type}, {"Z_CostContact", Int64.Type}, {"Z_Revenue", Int64.Type}, {"Response", Int64.Type}, {"FX_RENDA", type text}, {"FX_GASTO_VINHO_2ANOS", type text}, {"FX_GASTO_FRUTAS_2ANOS", type text}, {"FX_GASTO_CARNE_2ANOS", type text}, {"FX_GASTO_PESCADO_2ANOS", type text}, {"FX_GASTO_DOCES_2ANOS", type text}, {"FX_GASTO_PROD_GOLD_2ANOS", type text}, {"FX_FREQ_ULTM_COMPRA", type text}, {"FX_COMPRAS_WEB", type text}, {"FX_COMPRAS_USANDO_CATALOGO", type text}, {"FX_COMPRAS_COM_DESCONTO", type text}, {"FX_COMPRAS_NA_LOJA", type text}, {"FX_VISITAS_WEB_ULT_MES", type text}, {"IDADE", Int64.Type}, {"FX_IDADE", type text}, {"FX_CLIENTE_DESDE", type text}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"Dt_Customer", "Date"}}),
+				    #"Data Inserida" = Table.AddColumn(#"Colunas Renomeadas", "Data", each DateTime.Date([Date]), type date),
+				    #"Colunas Renomeadas1" = Table.RenameColumns(#"Data Inserida",{{"Data", "mes/ano"}}),
+				    #"Ano Inserido" = Table.AddColumn(#"Colunas Renomeadas1", "Ano", each Date.Year([Date]), Int64.Type)
+				in
+				    #"Ano Inserido"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

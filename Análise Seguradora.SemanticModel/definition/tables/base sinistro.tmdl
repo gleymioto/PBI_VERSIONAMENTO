@@ -1,0 +1,213 @@
+table 'base sinistro'
+	lineageTag: 0c9246c9-7d6c-4d74-98b6-f71791be3cce
+
+	column cep
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a2272f5-7006-45ab-bd70-500ed613e971
+		summarizeBy: sum
+		sourceColumn: cep
+
+		annotation SummarizationSetBy = Automatic
+
+	column dt_ocorrencia_sinistro
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4f995e98-2d27-4f5f-b752-f0f16963a292
+		summarizeBy: none
+		sourceColumn: dt_ocorrencia_sinistro
+
+		variation Variation
+			isDefault
+			relationship: 2c65e52b-8310-4c74-b2da-91afc1e881b3
+			defaultHierarchy: LocalDateTable_1d6e3b2f-a23a-4e32-b263-bb30fca9515c.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Estado
+		dataType: string
+		lineageTag: 505ebce5-9ef3-435d-8466-d647733a172a
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column idade
+		dataType: int64
+		lineageTag: 4549094b-bd4f-47de-916b-17c2ddeff523
+		summarizeBy: sum
+		sourceColumn: idade
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Cidade
+		dataType: string
+		lineageTag: 1613f763-5031-413a-86e6-d279a5d9adc9
+		summarizeBy: none
+		sourceColumn: Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fabricante
+		dataType: string
+		lineageTag: 0df38b42-4e81-43dd-9abd-0f09d93d7d4b
+		summarizeBy: none
+		sourceColumn: Fabricante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Veiculo
+		dataType: string
+		lineageTag: a65a563c-0fde-463e-9ba3-9e4a89617d59
+		summarizeBy: none
+		sourceColumn: Veiculo
+
+		annotation SummarizationSetBy = Automatic
+
+	column sexo
+		dataType: string
+		lineageTag: 0c58fb7c-5670-4c7c-81fc-bfbacf1652d9
+		summarizeBy: none
+		sourceColumn: sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_civil
+		dataType: string
+		lineageTag: 1d1f14e7-5a1f-4a5b-a542-cd2d6c4a1aa8
+		summarizeBy: none
+		sourceColumn: estado_civil
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_pessoa
+		dataType: string
+		lineageTag: 550ec397-88b4-44ee-b011-c7d231de05c0
+		summarizeBy: none
+		sourceColumn: tipo_pessoa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Exposição
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a0816e9-a318-4688-be90-524df92fd3b3
+		summarizeBy: sum
+		sourceColumn: Exposição
+
+		annotation SummarizationSetBy = Automatic
+
+	column sin_perda_parcial
+		dataType: int64
+		formatString: 0
+		lineageTag: 9f4e0dc1-49e0-47f2-98f5-b0be96771e2b
+		summarizeBy: sum
+		sourceColumn: sin_perda_parcial
+
+		annotation SummarizationSetBy = Automatic
+
+	column sin_perda_total
+		dataType: int64
+		formatString: 0
+		lineageTag: 276367a7-e626-4619-899f-e4b4d3c13191
+		summarizeBy: sum
+		sourceColumn: sin_perda_total
+
+		annotation SummarizationSetBy = Automatic
+
+	column sin_roubo
+		dataType: int64
+		formatString: 0
+		lineageTag: a30d0e52-8e00-4f92-a753-d4947b294db6
+		summarizeBy: sum
+		sourceColumn: sin_roubo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome do Mês'
+		dataType: string
+		lineageTag: 62170caa-ed51-47d6-afbd-4c685178aceb
+		summarizeBy: none
+		sourceColumn: Nome do Mês
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		dataType: int64
+		formatString: 0
+		lineageTag: a0ae3c34-fb05-4e53-8860-61b289b259a5
+		summarizeBy: sum
+		sourceColumn: Mês
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: c20e6840-caf8-42a1-bc7a-4b715efe1836
+		summarizeBy: sum
+		sourceColumn: Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cluster Idade' = If('base sinistro'[idade]<=0,"Não Informado",If('base sinistro'[idade]<=25,"Menos que 25 anos",If('base sinistro'[idade]<=40,"De 26 a 40 anos",If('base sinistro'[idade]<55,"De 41 a 54 anos",If('base sinistro'[idade]>=55, "Acima de 55 Anos")))))
+		dataType: string
+		lineageTag: de9db3c7-f785-4ed3-ac50-e074fc47f7c3
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Média sinistro' = ```
+			
+			  CALCULATE(SUMX('base sinistro',
+			    SUM('base sinistro'[sin_perda_parcial]))
+			)
+			```
+		dataType: int64
+		formatString: 0
+		lineageTag: 02073a2e-5444-4f92-90cc-fd22adcedab0
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Sinistros' = ('base sinistro'[sin_perda_parcial]+('base sinistro'[sin_perda_total]+('base sinistro'[sin_perda_total])))
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c310e63-8cfc-46f5-bff5-44b75a32e037
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'base sinistro-d6bab39d-fcff-4fbe-b2d5-67349e8b7ce0' = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\gleyd\OneDrive\Área de Trabalho\GLEY\MBA\base_sinistros.txt"),[Delimiter=";", Columns=14, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"dt_ocorrencia_sinistro", type text}, {"Estado", type text}, {"cep", Int64.Type}, {"idade", type text}, {"Cidade", type text}, {"Fabricante", type text}, {"Veiculo", type text}, {"sexo", type text}, {"estado_civil", type text}, {"tipo_pessoa", type text}, {"exposicao", Int64.Type}, {"sin_perda_parcial", Int64.Type}, {"sin_perda_total", Int64.Type}, {"sin_roubo", Int64.Type}}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Tipo Alterado","PESSOA JURIDI","PESSOA JURIDICA",Replacer.ReplaceText,{"tipo_pessoa"}),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Valor Substituído",{"cep", "dt_ocorrencia_sinistro", "Estado", "idade", "Cidade", "Fabricante", "Veiculo", "sexo", "estado_civil", "tipo_pessoa", "exposicao", "sin_perda_parcial", "sin_perda_total", "sin_roubo"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Colunas Reordenadas","","Não informado",Replacer.ReplaceValue,{"sexo"}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Valor Substituído1",{{"exposicao", "Exposição"}}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Colunas Renomeadas",".","0",Replacer.ReplaceText,{"idade"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Valor Substituído2",{{"idade", Int64.Type}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado1", each true),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"dt_ocorrencia_sinistro", type date}}),
+				    #"Ano Inserido" = Table.AddColumn(#"Tipo Alterado2", "Ano", each Date.Year([dt_ocorrencia_sinistro]), Int64.Type),
+				    #"Colunas Reordenadas1" = Table.ReorderColumns(#"Ano Inserido",{"cep", "dt_ocorrencia_sinistro", "Ano", "Estado", "idade", "Cidade", "Fabricante", "Veiculo", "sexo", "estado_civil", "tipo_pessoa", "Exposição", "sin_perda_parcial", "sin_perda_total", "sin_roubo"}),
+				    #"Mês Inserido" = Table.AddColumn(#"Colunas Reordenadas1", "Mês", each Date.Month([dt_ocorrencia_sinistro]), Int64.Type),
+				    #"Colunas Reordenadas2" = Table.ReorderColumns(#"Mês Inserido",{"cep", "dt_ocorrencia_sinistro", "Mês", "Ano", "Estado", "idade", "Cidade", "Fabricante", "Veiculo", "sexo", "estado_civil", "tipo_pessoa", "Exposição", "sin_perda_parcial", "sin_perda_total", "sin_roubo"}),
+				    #"Nome do Mês Inserido" = Table.AddColumn(#"Colunas Reordenadas2", "Nome do Mês", each Date.MonthName([dt_ocorrencia_sinistro]), type text),
+				    #"Colunas Reordenadas3" = Table.ReorderColumns(#"Nome do Mês Inserido",{"cep", "dt_ocorrencia_sinistro", "Nome do Mês", "Mês", "Ano", "Estado", "idade", "Cidade", "Fabricante", "Veiculo", "sexo", "estado_civil", "tipo_pessoa", "Exposição", "sin_perda_parcial", "sin_perda_total", "sin_roubo"})
+				in
+				    #"Colunas Reordenadas3"
+
+	annotation PBI_ResultType = Table
+

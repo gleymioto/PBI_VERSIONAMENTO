@@ -1,0 +1,28 @@
+table d_ID
+	lineageTag: 807a6fc3-4253-42d8-a03e-b7707d55e8a6
+
+	column listing_id
+		dataType: string
+		lineageTag: b1e0c915-7b2f-4650-ac76-8bf870627fff
+		summarizeBy: none
+		sourceColumn: listing_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_ID-af1f4b0e-1e7e-4680-9926-2b85c8d18f0a = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\User\Desktop\GleyNovo\MBA FIAP\FASE 2\BASES\reviews\reviews_SETEMB.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"listing_id", Int64.Type}, {"id", Int64.Type}, {"date", type date}, {"reviewer_id", Int64.Type}, {"reviewer_name", type text}, {"comments", type text}}),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Tipo Alterado",{"id", "listing_id", "date", "reviewer_id", "reviewer_name", "comments"}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Colunas Reordenadas",{"id", "date", "reviewer_id", "reviewer_name", "comments"}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Colunas Removidas"),
+				    #"Duplicatas Removidas1" = Table.Distinct(#"Duplicatas Removidas"),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Duplicatas Removidas1",{{"listing_id", type text}})
+				in
+				    #"Tipo Alterado1"
+
+	annotation PBI_ResultType = Table
+

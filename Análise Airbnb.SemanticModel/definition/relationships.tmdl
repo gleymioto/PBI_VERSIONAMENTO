@@ -1,0 +1,63 @@
+relationship cf9a0da4-854a-4382-bca7-616bedf07c7a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: d_Calendar.Data
+	toColumn: LocalDateTable_de5b07fb-c613-4cb8-b385-21218ff231f7.Date
+
+relationship d861a361-4bea-4f4c-84d3-79d760a4a9a1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: f_listings.last_scraped
+	toColumn: LocalDateTable_74602cbf-2e9d-40e0-b79b-c4ed9910a00a.Date
+
+relationship 8cb5c802-8ec5-47f6-b01c-55437bab1b0f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: f_listings.host_since
+	toColumn: LocalDateTable_0303fbeb-81dd-48cf-9e3e-48f01847a6e7.Date
+
+relationship 2fc24996-f207-4041-ac4f-9065c98f72e2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: f_listings.calendar_last_scraped
+	toColumn: LocalDateTable_aab5ba2a-1665-4392-89fa-d8f5e5d36ce3.Date
+
+relationship 29c4004a-2c64-4b74-bba0-804055c06dbe
+	joinOnDateBehavior: datePartOnly
+	fromColumn: f_listings.first_review
+	toColumn: LocalDateTable_a95f6d79-2c74-4106-b550-cd694927293f.Date
+
+relationship 59444509-b65d-4ae4-8a08-f7885a7ea705
+	joinOnDateBehavior: datePartOnly
+	fromColumn: f_listings.last_review
+	toColumn: LocalDateTable_c0ed1781-b28e-4eb5-a582-71ab8da6a403.Date
+
+relationship 2322239c-bb8e-4744-8ea9-a9b84e8bad7d
+	fromColumn: f_reviews.date
+	toColumn: d_Calendar.Data
+
+relationship 1cf9414c-4fea-42b8-abfd-c5417daae8d3
+	fromColumn: f_reviews.listing_id
+	toColumn: d_ID.listing_id
+
+relationship dffae5de-63b1-4048-b57a-3924357d4543
+	fromColumn: f_listings.listing_id
+	toColumn: d_ID.listing_id
+
+relationship 2b40fc90-47ee-4fc6-8a56-87cbc807def9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: d_Neighbourhood.'Data base'
+	toColumn: LocalDateTable_8d13dbc2-cad0-4273-b779-99cdb01fd656.Date
+
+relationship 96203ea3-7b2c-41f9-adf0-91d049daf32a
+	fromColumn: f_listings.neighbourhood_cleansed
+	toColumn: d_Neighbourhood.Neighbourhood
+
+relationship 8647b781-8743-4897-b6d9-227062f67db6
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: Regiões.Neighbourhood
+	toColumn: Host_bairros.host_neighbourhood
+
+relationship 1ba755f4-f706-4a66-9249-d8f6bb09c1f5
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: Regiões.Neighbourhood
+	toColumn: f_listings.neighbourhood_cleansed
+

@@ -1,0 +1,7 @@
+role 'RLS Teste'
+	modelPermission: read
+
+	tablePermission UnidadesEF = [Franquia] = "Marília"
+
+	annotation PBI_Id = fe5e747511d2449d9d31232684c30a1d
+

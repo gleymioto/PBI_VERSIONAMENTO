@@ -1,0 +1,28 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["apreciador senior","base completa","mediano","novos mercados","Consulta1","Dcalend","Medidas"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.128.952.0 (24.04)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_5c6360ae-9a7d-4a4c-97ea-3e9d1c26c2c7
+ref table 'apreciador senior'
+ref table 'base completa'
+ref table mediano
+ref table 'novos mercados'
+ref table Dcalend
+ref table LocalDateTable_cd4b1b77-2d29-4001-a1f0-12d31f2cdb62
+ref table Medidas
+ref table LocalDateTable_07a02596-a800-46b4-b993-b9922d9f96a6
+ref table LocalDateTable_0ffb624c-20c5-4744-a3c7-32253ed99220
+ref table LocalDateTable_4bce8a33-ef7c-4385-95b3-64b1ebf02d56
+
